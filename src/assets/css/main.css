@@ -1,0 +1,107 @@
+/*
+  MAIN STYLESHEET FILE - main.css
+  Contains the styling for the main site design, layout, and content.
+*/
+
+*,
+*::before,
+*::after
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root
+{
+  --color-dark: #222;
+  --color-dark-alt: #000;
+  --color-light: #eee;
+  --color-light-alt: #fff;
+  
+  --color-background: var( --color-light );
+  --color-background-alt: var( --color-light-alt );
+  --color-text: var( --color-dark );
+  --color-text-alt: var( --color-dark-alt );
+}
+
+@media ( prefers-color-scheme: dark )
+{
+  :root
+  {
+    --color-background: var( --color-dark );
+    --color-background-alt: var( --color-dark-alt );
+    --color-text: var( --color-light );
+    --color-text-alt: var( --color-light-alt );
+  }
+}
+
+html,
+body
+{
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-color: var( --color-background );
+  color: var( --color-text );
+}
+
+a
+{
+  color: var( --color-text-alt );
+}
+
+.container
+{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+/* Main Navigation */
+
+.main-navigation
+{
+  background-color: var( --color-background-alt );
+}
+
+.main-navigation .container
+{
+  padding: 0;
+  display: flex;
+}
+
+.main-navigation a
+{
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+
+/* Main Content */
+
+main.content h1,
+main.content h2,
+main.content h3,
+main.content h4,
+main.content h5,
+main.content h6,
+main.content p
+{
+  margin-top: 1rem;
+}
+
+main.content p
+{
+  line-height: 1.5;
+}
+
+
+/* Main Footer */
+
+footer.main
+{
+  font-size: 0.7rem;
+}
