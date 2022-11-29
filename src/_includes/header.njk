@@ -1,5 +1,31 @@
-<header class="main">
-  <div class="container">
-    <h1>Persona Clix</h1>
-  </div>
-</header>
+    <nav class="top-nav">
+      <div class="container">
+        <input type="checkbox" id="top-nav-toggle" class="nav-toggle">
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="https://client.personaclix.com/knowledgebase" target="_blank" rel="nofollow">Knowledgebase</a></li>
+          <li><a href="https://client.personaclix.com/" target="_blank" rel="nofollow">Account</a></li>
+          <li><a href="/contact" class="button">Contact</a></li>
+        </ul>
+        <label for="top-nav-toggle" class="nav-toggle-label"><span></span></label>
+      </div>
+    </nav>
+
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="/"><img src="https://images.staticly.ict.rocks/logos/personaclix_pcdh_logo_dark.png" alt="Persona Clix Logo (Dark)"></a>
+        </div>
+                
+        <div class="navbar">
+          <input type="checkbox" id="main-nav-toggle" class="nav-toggle">
+          <ul>
+            <li><a href="/"{% if page.url == "/" %} class="current"{% endif %}>Home</a></li>
+            <li><a href="/webhosting"{% if page.url.substr( 0, 12 ) == "/webhosting/" %} class="current"{% endif %}>Web Hosting</a></li>
+            <li><a href="/vps"{% if page.url.substr( 0, 5 ) == "/vps/" %} class="current"{% endif %}>VPS Hosting</a></li>
+            <li><a href="/why"{% if page.url.substr( 0, 5 ) == "/why/" %} class="current"{% endif %}>Why?</a></li>
+          </ul>
+          <label for="main-nav-toggle" class="nav-toggle-label"><span></span></label>
+        </div>
+      </div>
+    </header>
