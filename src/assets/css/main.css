@@ -3,7 +3,7 @@
   Contains the styling for the main site design, layout, and content.
 */
 
-@import url('https://webfonts.staticly.ict.rocks/montserrat/montserrat.css');
+@import url('https://webfonts.staticly.cc/montserrat/montserrat.css');
 
 :root
 {
@@ -265,7 +265,7 @@ img
 
 .hero.home .container
 {
-  background-image: url('https://images.staticly.ict.rocks/avatars/taramckale_personaclix_representitive.png');
+  background-image: url('https://images.staticly.cc/avatars/taramckale_personaclix_representitive.png');
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 250px;
@@ -1103,7 +1103,7 @@ img
 {
 	width: 100%;
 	aspect-ratio: 1 / 1;
-	background-image: url('https://images.staticly.ict.rocks/icons/world-map.svg');
+	background-image: url('https://images.staticly.cc/icons/world-map.svg');
 	display: flex;
 	justify-content: center;
 	align-items: center;
