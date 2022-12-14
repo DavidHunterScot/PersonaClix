@@ -2,16 +2,11 @@
 title: Contact Us
 description: No need to be shy, come and say hello.
 layout: "base.njk"
+hero:
+  class: 'contact'
+  title: 'Contact Us'
+  description: 'Get in touch today!'
 ---
-
-    <section class="contact hero">
-      <div class="container">
-        <div class="info">
-          <h1>Contact Us</h1>
-          <p>Get in touch today!</p>
-        </div>
-      </div>
-    </section>
         
     <section class="contact section">
       <div class="container">
@@ -20,33 +15,44 @@ layout: "base.njk"
         <div class="methods">
           <div class="method">
             <div class="icon">
-              <img src="https://images.staticly.cc/icons/chat.svg" alt="Chat Icon">
+              <img src="{{ icons_url }}/chat.svg" alt="Chat Icon">
             </div>
             
             <div class="button">
-              <a href="https://client.personaclix.com/contact.php" target="_blank">Pre-Sales</a>
+              <a href="{{ client_url }}/contact.php" target="_blank">Pre-Sales</a>
             </div>
           </div>
             
           <div class="method">
             <div class="icon">
-              <img src="https://images.staticly.cc/icons/help.svg" alt="Help Icon">
+              <img src="{{ icons_url }}/help.svg" alt="Help Icon">
             </div>
             
             <div class="button">
-              <a href="https://client.personaclix.com/submitticket.php" target="_blank">Support</a>
+              <a href="{{ client_url }}/submitticket.php" target="_blank">Support</a>
             </div>
           </div>
             
           <div class="method">
             <div class="icon">
-              <img src="https://images.staticly.cc/avatars/davidhunter_illustration_transparent_1.png" alt="David Hunter Illustration">
+              <img src="{{ avatars_url }}/davidhunter_illustration_transparent_1.png" alt="David Hunter Illustration">
             </div>
             
             <div class="button">
-              <a href="mailto:david.hunter@personaclix.com" target="_blank">David Hunter</a>
+              <a href="#" id="email_link">David Hunter</a>
             </div>
+
+            <p id="email_address">david [dot] hunter [at] personaclix [dot] com</p>
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+      var email_link = document.getElementById( 'email_link' );
+      var email_address = document.getElementById( 'email_address' );
+
+      email_address.innerHTML = email_address.innerHTML.replaceAll( ' [dot] ', '.' ).replaceAll( ' [at] ', '@' );
+      email_link.href = "mailto:" + email_address.innerHTML;
+      email_link.target = "_blank";
+    </script>

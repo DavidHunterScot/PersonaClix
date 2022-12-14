@@ -1,9 +1,0 @@
-{% if collections.MainNavigation.length > 0 %}
-  <nav class="main-navigation">
-    <div class="container">
-      {% for MainNavItem in collections.MainNavigation %}
-        <a href="{{ MainNavItem.url }}" class="{% if page.url == MainNavItem.url %}current-item{% elif page.url.substr( 0, MainNavItem.url.length ) == MainNavItem.url and page.url != "/" %}current-parent-item{% endif %}">{{ MainNavItem.data.title }}</a>
-      {% endfor %}
-    </div>
-  </nav>
-{% endif %}

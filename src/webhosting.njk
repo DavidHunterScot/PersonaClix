@@ -2,236 +2,277 @@
 title: Web Hosting
 description: Keeping your website online and available worldwide. Get started today for just £1!
 layout: "base.njk"
+hero:
+  class: 'webhosting'
+  title: 'Web Hosting'
+  description: 'Keeping your website online and availabile worldwide.'
+  button:
+    href: '#packages'
+    text: 'View More'
+  price:
+    text: 'First Month'
+    amount: '£1'
+  promo_image:
+    filename: 'hosting'
+    alt: 'Hosting'
 ---
 
-    <section class="hero webhosting">
-      <div class="container">
-        <div class="info">
-          <h1>Web Hosting</h1>
-          <p>Keeping your website online and available worldwide.</p>
-          <div class="button-price">
-            <div class="button">
-              <a href="#packages">View More</a>
-            </div>
-            <div class="price" style="background-image: url('https://images.staticly.cc/ui/swirl.png');">
-              First Month <b>£1</b>
-            </div>
-          </div>
-        </div>
+    {%
+      set packages =
+      [
+        {
+          'title': 'Personal',
+          'description': 'Suitable for a Single Website',
+          'promotion':
+          {
+            'price': '£1',
+            'text': 'First Month',
+            'code': 'FIRSTMONTH'
+          },
+          'price':
+          {
+            'amount': '£5.99',
+            'frequency': 'month'
+          },
+          'cart_pid': '14',
+          'specs':
+          [
+            {
+              'value': '512 MB',
+              'name': 'Web Space'
+            },
+            {
+              'value': '1',
+              'name': 'Website'
+            },
+            {
+              'value': '1',
+              'name': 'Email Account'
+            },
+            {
+              'value': '1',
+              'name': 'MySQL Database'
+            }
+          ]
+        },
+        {
+          'title': 'Family',
+          'description': 'Suitable for Multiple Websites',
+          'promotion':
+          {
+            'price': '£1',
+            'text': 'First Month',
+            'code': 'FIRSTMONTH'
+          },
+          'price':
+          {
+            'amount': '£8.49',
+            'frequency': 'month'
+          },
+          'cart_pid': '24',
+          'specs':
+          [
+            {
+              'value': '1280 MB',
+              'name': 'Web Space'
+            },
+            {
+              'value': '5',
+              'name': 'Website'
+            },
+            {
+              'value': '5',
+              'name': 'Email Account'
+            },
+            {
+              'value': '5',
+              'name': 'MySQL Database'
+            }
+          ]
+        },
+        {
+          'title': 'Business',
+          'description': 'Suitable for a Bigger Website',
+          'promotion':
+          {
+            'price': '£1',
+            'text': 'First Month',
+            'code': 'FIRSTMONTH'
+          },
+          'price':
+          {
+            'amount': '£12.99',
+            'frequency': 'month'
+          },
+          'cart_pid': '15',
+          'specs':
+          [
+            {
+              'value': '2560 MB',
+              'name': 'Web Space'
+            },
+            {
+              'value': 'Unlimited',
+              'name': 'Website'
+            },
+            {
+              'value': 'Unlimited',
+              'name': 'Email Account'
+            },
+            {
+              'value': 'Unlimited',
+              'name': 'MySQL Database'
+            }
+          ]
+        }
+      ]
+    %}
 
-        <div class="promo-image">
-          <img src="https://images.staticly.cc/icons/hosting.svg" alt="Hosting Icon">
-        </div>
-      </div>
-    </section>
-        
     <section class="packages section">
       <div class="container">
         <a name="packages"></a>
         <h2>Packages</h2>
         <div class="packages">
-          <div class="package">
-            <div class="title">Personal</div>
-            <div class="description">Suitable for a Single Website</div>
-            <div class="promotion">
-              <div class="price">£1</div>
-              <div class="text">First Month</div>
-            </div>
-                    
-            <div class="price">Then <b>£5.99</b> per month</div>
-                        
-            <div class="button order">
-              <a href="https://client.personaclix.com/cart.php?a=add&pid=14&promocode=FIRSTMONTH" target="_blank">Order Now</a>
-            </div>
-                    
-            <div class="specs">
-              <div class="spec">
-                <b>512 MB</b> Web Space
-              </div>
-                        
-              <div class="spec">
-                <b>1</b> Website
-              </div>
-                            
-              <div class="spec">
-                <b>1</b> Email Account
+          {% for package in packages %}
+            <div class="package">
+              <div class="title">{{ package.title }}</div>
+              <div class="description">{{ package.description }}</div>
+              
+              <div class="promotion">
+                <div class="price">{{ package.promotion.price }}</div>
+                <div class="text">{{ package.promotion.text }}</div>
               </div>
 
-              <div class="spec">
-                <b>1</b> MySQL Database
-              </div>
-            </div>
-          </div>
+              <div class="price">Then <b>{{ package.price.amount }}</b> per {{ package.price.frequency }}</div>
 
-          <div class="package">
-            <div class="title">Family</div>
-            <div class="description">Suitable for Multiple Websites.</div>
-                    
-            <div class="promotion">
-            <div class="price">£1</div>
-            <div class="text">First Month</div>
-            </div>
-                    
-            <div class="price">Then <b>£8.49</b> per month</div>
-                    
-            <div class="button order">
-            <a href="https://client.personaclix.com/cart.php?a=add&pid=24&promocode=FIRSTMONTH" target="_blank">Order Now</a>
-            </div>
-                    
-            <div class="specs">
-            <div class="spec">
-                <b>1280 MB</b> Web Space
-            </div>
-
-            <div class="spec">
-                <b>5</b> Websites
-            </div>
-
-            <div class="spec">
-                <b>5</b> Email Accounts
-            </div>
-
-            <div class="spec">
-                <b>5</b> MySQL Databases
-            </div>
-            </div>
-          </div>
-
-          <div class="package">
-            <div class="title">Business</div>
-            <div class="description">Suitable for a Bigger Website</div>
-        
-            <div class="promotion">
-              <div class="price">£1</div>
-              <div class="text">First Month</div>
-            </div>
-        
-            <div class="price">Then <b>£12.99</b> per month</div>
-        
-            <div class="button order">
-              <a href="https://client.personaclix.com/cart.php?a=add&pid=14&promocode=FIRSTMONTH" target="_blank">Order Now</a>
-            </div>
-        
-            <div class="specs">
-              <div class="spec">
-                <b>2560 MB</b> Web Space
+              <div class="button order">
+                <a href="{{ client_url }}/cart.php?a=add&pid={{ package.cart_pid }}&promocode={{ package.promotion.code }}" target="_blank">Order Now</a>
               </div>
 
-              <div class="spec">
-                <b>Unlimited</b> Websites
-              </div>
-        
-              <div class="spec">
-                <b>Unlimited</b> Email Accounts
-              </div>
-
-              <div class="spec">
-                <b>Unlimited</b> MySQL Databases
+              <div class="specs">
+                {% for spec in package.specs %}
+                  <div class="spec">
+                    <b>{{ spec.value }}</b> {{ spec.name }}
+                  </div>
+                {% endfor %}
               </div>
             </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
-        
+    
+    {%
+      set features =
+      [
+        {
+          'icon': 'speed',
+          'icon_alt': 'Speed',
+          'title': 'Blazing Fast',
+          'description': 'LiteSpeed Web Server and other technologies help your website load fast.'
+        },
+        {
+          'icon': 'pound-coin',
+          'icon_alt': 'Pound Coin',
+          'title': 'Low Cost',
+          'description': 'The great service you expect for less. Get started today for only £1!'
+        },
+        {
+          'icon': 'cloud-servers',
+          'icon_alt': 'Cloud Servers',
+          'title': 'High Availability',
+          'description': 'Fully redundant servers ensure your service remains online as much as possible.'
+        },
+        {
+          'icon': 'cloud-computing-servers',
+          'icon_alt': 'Cloud Computing Servers',
+          'title': 'Triple Replicated',
+          'description': 'A copy of your data is replicated across three physically separate servers, offering better protection against data loss versus RAID.'
+        },
+        {
+          'icon': 'storage-backup',
+          'icon_alt': 'Storage Backup',
+          'title': 'Daily Off-Site Backups',
+          'description': 'Your entire hosting account is backed up once every day and stored in a separate facility for peace of mind and disaster recovery.'
+        },
+        {
+          'icon': 'dot-com',
+          'icon_alt': '.com',
+          'title': 'No Domain Required',
+          'description': 'Free sub domain for use instead of your own domain.'
+        },
+        {
+          'icon': 'wordpress',
+          'icon_alt': 'WordPress',
+          'title': 'Optimised for WordPress',
+          'description': 'The LiteSpeed Cache plugin for WordPress optimises your site/blog so that the content loads fast.'
+        },
+        {
+          'icon': 'open-box',
+          'icon_alt': 'Open Box',
+          'title': 'Quick Installer',
+          'description': 'Get started quickly with common web apps using Softaculous.'
+        }
+      ]
+    %}
+
     <section class="features section">
       <div class="container">
         <h2>Included Features</h2>
         <p>(Others Call Them "Extras")</p>
 
         <div class="features">
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/speed.svg" alt="Speed Icon"></div>
-            <div class="title">Blazing Fast</div>
-            <div class="description">LiteSpeed Web Server and other technologies help your website load fast.</div>
-          </div>
-    
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/pound-coin.svg" alt="Pound Coin Icon"></div>
-            <div class="title">Low Cost</div>
-            <div class="description">The great service you expect for less. Get started today for only £1!</div>
-          </div>
-            
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/cloud-servers.svg" alt="Cloud Servers Icon"></div>
-            <div class="title">High Availability</div>
-            <div class="description">Fully redundant servers ensure your service remains online as much as possible.</div>
-          </div>
-
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/cloud-computing-servers.svg" alt="Cloud Computing Servers Icon"></div>
-            <div class="title">Triple Replicated</div>
-            <div class="description">A copy of your data is replicated across three physically separate servers, offering better protection against data loss versus RAID.</div>
-          </div>
-
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/storage-backup.svg" alt="Storage Backup Icon"></div>
-            <div class="title">Daily Off-Site Backups</div>
-            <div class="description">Your entire hosting account is backed up once every day and stored in a separate facility for peace of mind and disaster recovery.</div>
-          </div>
-
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/dot-com.svg" alt=".com Icon"></div>
-            <div class="title">No Domain Required</div>
-            <div class="description">Free sub domain for use instead of your own domain.</div>
-          </div>
-
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/wordpress.svg" alt="WordPress Icon"></div>
-            <div class="title">Optimised for WordPress</div>
-            <div class="description">The LiteSpeed Cache plugin for WordPress optimises your site/blog so that the content loads fast.</div>
-          </div>
-
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/open-box.svg" alt="Open Box Icon"></div>
-            <div class="title">Quick Installer</div>
-            <div class="description">Get started quickly with common web apps using Softaculous.</div>
-          </div>
+          {% for feature in features %}
+            <div class="feature">
+              <div class="icon"><img src="{{ icons_url }}/{{ feature.icon }}.svg" alt="{{ feature.icon_alt }} Icon"></div>
+              <div class="title">{{ feature.title }}</div>
+              <div class="description">{{ feature.description }}</div>
+            </div>
+          {% endfor %}
         </div>
       </div>
     </section>
-    
+
+    {%
+      set faqs =
+      [
+        {
+          'question': 'Do you offer a backup service?',
+          'answer': 'Yes we do. We take a backup of your web hosting account once every day and store it in a separate facility. You can restore from these backups at any time using the JetBackups section of your web hosting account.'
+        },
+        {
+          'question': 'Do I need a website to use your web hostng service?',
+          'answer': 'No you do not. Once your web hosting account has been provisioned, you can use our free website builder to build your own website easily, or you can use Softaculous to quickly install common web apps such as WordPress.'
+        },
+        {
+          'question': 'Why Triple Replication over RAID?',
+          'answer': 'We consider your data to be of utmost importance. The possibility of data loss is orders of magnitude lower than that of even a RAID Array, because to lose data, not only is a simultaneous failure of 3 drives needed (an extremely rare occurance where a RAID Array would lose data), it would need to be the 3 drives that store the same chunks of data as each other, across 3 physically separate servers.'
+        }
+      ]
+    %}
+
     <section class="faqs section">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
         <p>Click or tap on a question to get the answer.</p>
-        
+
         <div class="faqs">
-          <div class="faq">
-            <input type="checkbox" class="toggle" id="faq_toggle_1">
-            
-            <div class="question">
-              <label for="faq_toggle_1">
-                Do you offer a backup service?
-              </label>
+          {% for faq in faqs %}
+            {% set id = 'faq_toggle_' + loop.index %}
+            <div class="faq">
+              <input type="checkbox" class="toggle" id="{{ id }}">
+
+              <div class="question">
+                <label for="{{ id }}">
+                  {{ faq.question }}
+                </label>
+              </div>
+
+              <div class="answer">
+                {{ faq.answer }}
+              </div>
             </div>
-    
-            <div class="answer">Yes we do. We take a backup of your web hosting account once every day and store it in a separate facility. You can restore from these backups at any time using the JetBackups section of your web hosting account.</div>
-          </div>
-    
-          <div class="faq">
-            <input type="checkbox" class="toggle" id="faq_toggle_2">
-    
-            <div class="question">
-              <label for="faq_toggle_2">
-                Do I need a website to use your web hostng service?
-              </label>
-            </div>
-    
-            <div class="answer">No you don't. Once your web hosting account has been provisioned, you can use our free website builder to build your own website easily, or you can use Softaculous to quickly install common web apps such as WordPress.</div>
-          </div>
-    
-          <div class="faq">
-            <input type="checkbox" class="toggle" id="faq_toggle_3">
-    
-            <div class="question">
-              <label for="faq_toggle_3">
-                Why Triple Replication over RAID?
-              </label>
-            </div>
-    
-            <div class="answer">We consider your data to be of utmost importance. The possibility of data loss is orders of magnitude lower than that of even a RAID Array, because to lose data, not only is a simultaneous failure of 3 drives needed (an extremely rare occurance where a RAID Array would lose data), it would need to be the 3 drives that store the same chunks of data as each other, across 3 physically separate servers.</div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
