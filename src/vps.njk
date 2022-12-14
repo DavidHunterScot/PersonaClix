@@ -2,341 +2,481 @@
 title: Premium VPS Hosting
 description: Premium VPS Hosting. Ultra Redundant Virtual Private Servers.
 layout: "base.njk"
+hero:
+  class: 'vps premium'
+  title: 'Premium VPS Hosting'
+  description: 'Ultra Redundant Virtual Private Servers'
+  button:
+    href: '#packages'
+    text: 'View More'
+  price:
+    text: 'From just'
+    amount: '£16.99'
+  promo_image:
+    filename: 'cloud-servers'
+    alt: 'Cloud Servers'
 ---
-
-    <section class="vps hero vps premium">
-      <div class="container">
-        <div class="info">
-          <h1>Premium VPS Hosting</h1>
-          <p>Ultra Redundant Virtual Private Servers</p>
-
-          <div class="button-price">
-            <div class="button">
-              <a href="#packages">View More</a>
-            </div>
-            
-            <div class="price" style="background-image: url('https://images.staticly.cc/ui/swirl.png');">
-              From just <b>£16.99</b>
-            </div>
-          </div>
-        </div>
-            
-        <div class="promo-image">
-          <img src="https://images.staticly.cc/icons/cloud-servers.svg" alt="Cloud Servers Icon">
-        </div>
-      </div>
-    </section>
         
+    {%
+      set packages =
+      [
+        {
+          'title': 'VPS-1',
+          'specs':
+          [
+            {
+              'value': '1',
+              'name': 'vCPU Cores'
+            },
+            {
+              'value': '1 GB',
+              'name': 'RAM'
+            },
+            {
+              'value': '10 GB',
+              'name': 'NVMe SSD'
+            },
+            {
+              'value': '100 GB',
+              'name': 'Data Transfer'
+            },
+            {
+              'value': 'Linux',
+              'name': 'Operating System'
+            }
+          ],
+          'store_url': 'vps-1',
+          'price':
+          {
+            'amount': '£16.99',
+            'frequency': 'month'
+          }
+        },
+        {
+          'title': 'VPS-3',
+          'specs':
+          [
+            {
+              'value': '1',
+              'name': 'vCPU Cores'
+            },
+            {
+              'value': '3 GB',
+              'name': 'RAM'
+            },
+            {
+              'value': '25 GB',
+              'name': 'NVMe SSD'
+            },
+            {
+              'value': '1 TB',
+              'name': 'Data Transfer'
+            },
+            {
+              'value': 'Linux',
+              'name': 'Operating System'
+            }
+          ],
+          'store_url': 'vps-3',
+          'price':
+          {
+            'amount': '£21.99',
+            'frequency': 'month'
+          }
+        },
+        {
+          'title': 'VPS-6',
+          'specs':
+          [
+            {
+              'value': '2',
+              'name': 'vCPU Cores'
+            },
+            {
+              'value': '6 GB',
+              'name': 'RAM'
+            },
+            {
+              'value': '50 GB',
+              'name': 'NVMe SSD'
+            },
+            {
+              'value': '1 TB',
+              'name': 'Data Transfer'
+            },
+            {
+              'value': 'Linux',
+              'name': 'Operating System'
+            }
+          ],
+          'store_url': 'vps-6',
+          'price':
+          {
+            'amount': '£37.99',
+            'frequency': 'month'
+          }
+        },
+        {
+          'title': 'VPS-12',
+          'specs':
+          [
+            {
+              'value': '4',
+              'name': 'vCPU Cores'
+            },
+            {
+              'value': '12 GB',
+              'name': 'RAM'
+            },
+            {
+              'value': '100 GB',
+              'name': 'NVMe SSD'
+            },
+            {
+              'value': '1 TB',
+              'name': 'Data Transfer'
+            },
+            {
+              'value': 'Linux',
+              'name': 'Operating System'
+            }
+          ],
+          'store_url': 'vps-12',
+          'price':
+          {
+            'amount': '£69.99',
+            'frequency': 'month'
+          }
+        },
+        {
+          'title': 'VPS-18',
+          'specs':
+          [
+            {
+              'value': '6',
+              'name': 'vCPU Cores'
+            },
+            {
+              'value': '18 GB',
+              'name': 'RAM'
+            },
+            {
+              'value': '150 GB',
+              'name': 'NVMe SSD'
+            },
+            {
+              'value': '1 TB',
+              'name': 'Data Transfer'
+            },
+            {
+              'value': 'Linux',
+              'name': 'Operating System'
+            }
+          ],
+          'store_url': 'vps-18',
+          'price':
+          {
+            'amount': '£100.99',
+            'frequency': 'month'
+          }
+        },
+        {
+          'title': 'VPS-24',
+          'specs':
+          [
+            {
+              'value': '8',
+              'name': 'vCPU Cores'
+            },
+            {
+              'value': '24 GB',
+              'name': 'RAM'
+            },
+            {
+              'value': '200 GB',
+              'name': 'NVMe SSD'
+            },
+            {
+              'value': '1 TB',
+              'name': 'Data Transfer'
+            },
+            {
+              'value': 'Linux',
+              'name': 'Operating System'
+            }
+          ],
+          'store_url': 'vps-24',
+          'price':
+          {
+            'amount': '£133.99',
+            'frequency': 'month'
+          }
+        },
+        {
+          'title': 'VPS-36',
+          'specs':
+          [
+            {
+              'value': '12',
+              'name': 'vCPU Cores'
+            },
+            {
+              'value': '36 GB',
+              'name': 'RAM'
+            },
+            {
+              'value': '300 GB',
+              'name': 'NVMe SSD'
+            },
+            {
+              'value': '1 TB',
+              'name': 'Data Transfer'
+            },
+            {
+              'value': 'Linux',
+              'name': 'Operating System'
+            }
+          ],
+          'store_url': 'vps-36',
+          'price':
+          {
+            'amount': '£195.99',
+            'frequency': 'month'
+          }
+        },
+        {
+          'title': 'VPS-48',
+          'specs':
+          [
+            {
+              'value': '16',
+              'name': 'vCPU Cores'
+            },
+            {
+              'value': '48 GB',
+              'name': 'RAM'
+            },
+            {
+              'value': '400 GB',
+              'name': 'NVMe SSD'
+            },
+            {
+              'value': '1 TB',
+              'name': 'Data Transfer'
+            },
+            {
+              'value': 'Linux',
+              'name': 'Operating System'
+            }
+          ],
+          'store_url': 'vps-48',
+          'price':
+          {
+            'amount': '£259.99',
+            'frequency': 'month'
+          }
+        }
+      ]
+    %}
+    
     <section class="packages section">
       <div class="container">
         <a name="packages"></a>
         <h2>Packages</h2>
             
         <div class="packages">
+          {% for package in packages %}
           <div class="package">
-            <div class="title">VPS-1</div>
+            <div class="title">{{ package.title }}</div>
                         
             <div class="specs">
-              <div class="spec"><b>1</b> vCPU Cores</div>
-              <div class="spec"><b>1 GB</b> RAM</div>
-              <div class="spec"><b>10 GB</b> NVMe SSD</div>
-              <div class="spec"><b>100 GB</b> Data Transfer</div>
-              <div class="spec"><b>Linux</b> Operating System</div>
+              {% for spec in package.specs %}
+              <div class="spec"><b>{{ spec.value }}</b> {{ spec.name }}</div>
+              {% endfor %}
             </div>
           
-            <div class="order button"><a href="https://client.personaclix.com/store/vps/vps-1" target="_blank">Order</a></div>
-            <div class="price"><b>£16.99</b> per month</div>
+            <div class="order button"><a href="{{ client_url }}/store/vps/{{ package.store_url }}" target="_blank">Order</a></div>
+            <div class="price"><b>{{ package.price.amount }}</b> per {{ package.price.frequency }}</div>
           </div>
-          
-          <div class="package">
-            <div class="title">VPS-3</div>
-              
-            <div class="specs">
-              <div class="spec"><b>1</b> vCPU Cores</div>
-              <div class="spec"><b>3 GB</b> RAM</div>
-              <div class="spec"><b>25 GB</b> NVMe SSD</div>
-              <div class="spec"><b>1 TB</b> Data Transfer</div>
-              <div class="spec"><b>Linux</b> Operating System</div>
-            </div>
-        
-            <div class="order button"><a href="https://client.personaclix.com/store/vps/vps-3" target="_blank">Order</a></div>
-            <div class="price"><b>£21.99</b> per month</div>
-          </div>
-          
-          <div class="package">
-            <div class="title">VPS-6</div>
-        
-            <div class="specs">
-              <div class="spec"><b>2</b> vCPU Cores</div>
-              <div class="spec"><b>6 GB</b> RAM</div>
-              <div class="spec"><b>50 GB</b> NVMe SSD</div>
-              <div class="spec"><b>1 TB</b> Data Transfer</div>
-              <div class="spec"><b>Linux</b> Operating System</div>
-            </div>
-        
-            <div class="order button"><a href="https://client.personaclix.com/store/vps/vps-6" target="_blank">Order</a></div>
-            <div class="price"><b>£37.99</b> per month</div>
-          </div>
-        
-          <div class="package">
-            <div class="title">VPS-12</div>
-            <div class="specs">
-              <div class="spec"><b>4</b> vCPU Cores</div>
-              <div class="spec"><b>12 GB</b> RAM</div>
-              <div class="spec"><b>100 GB</b> NVMe SSD</div>
-              <div class="spec"><b>1 TB</b> Data Transfer</div>
-              <div class="spec"><b>Linux</b> Operating System</div>
-            </div>
-        
-            <div class="order button"><a href="https://client.personaclix.com/store/vps/vps-12" target="_blank">Order</a></div>
-            <div class="price"><b>£69.99</b> per month</div>
-          </div>
-        
-          <div class="package">
-            <div class="title">VPS-18</div>
-        
-            <div class="specs">
-              <div class="spec"><b>6</b> vCPU Cores</div>
-              <div class="spec"><b>18 GB</b> RAM</div>
-              <div class="spec"><b>150 GB</b> NVMe SSD</div>
-              <div class="spec"><b>1 TB</b> Data Transfer</div>
-              <div class="spec"><b>Linux</b> Operating System</div>
-            </div>
-        
-            <div class="order button"><a href="https://client.personaclix.com/store/vps/vps-18" target="_blank">Order</a></div>
-            <div class="price"><b>£100.99</b> per month</div>
-          </div>
-        
-          <div class="package">
-            <div class="title">VPS-24</div>
-                    
-            <div class="specs">
-              <div class="spec"><b>8</b> vCPU Cores</div>
-              <div class="spec"><b>24 GB</b> RAM</div>
-              <div class="spec"><b>200 GB</b> NVMe SSD</div>
-              <div class="spec"><b>1 TB</b> Data Transfer</div>
-              <div class="spec"><b>Linux</b> Operating System</div>
-            </div>
-            
-            <div class="order button"><a href="https://client.personaclix.com/store/vps/vps-24" target="_blank">Order</a></div>
-            <div class="price"><b>£133.99</b> per month</div>
-          </div>
-        
-          <div class="package">
-            <div class="title">VPS-36</div>
-                    
-            <div class="specs">
-              <div class="spec"><b>12</b> vCPU Cores</div>
-              <div class="spec"><b>36 GB</b> RAM</div>
-              <div class="spec"><b>300 GB</b> NVMe SSD</div>
-              <div class="spec"><b>1 TB</b> Data Transfer</div>
-              <div class="spec"><b>Linux</b> Operating System</div>
-            </div>
-            
-            <div class="order button"><a href="https://client.personaclix.com/store/vps/vps-36" target="_blank">Order</a></div>
-            <div class="price"><b>£195.99</b> per month</div>
-          </div>
-          
-          <div class="package">
-            <div class="title">VPS-48</div>
-                      
-            <div class="specs">
-              <div class="spec"><b>16</b> vCPU Cores</div>
-              <div class="spec"><b>48 GB</b> RAM</div>
-              <div class="spec"><b>400 GB</b> NVMe SSD</div>
-              <div class="spec"><b>1 TB</b> Data Transfer</div>
-              <div class="spec"><b>Linux</b> Operating System</div>
-            </div>
-          
-            <div class="order button"><a href="https://client.personaclix.com/store/vps/vps-48" target="_blank">Order</a></div>
-            <div class="price"><b>£259.99</b> per month</div>
-          </div>
+          {% endfor %}
         </div>
         <p><b>Scroll down to see more features and information.</b></p>
       </div>
     </section>
-        
+    
+    {%
+      set features =
+      [
+        {
+          'icon':
+          {
+            'filename': 'amd_epyc',
+            'alt': 'AMD EPYC'
+          },
+          'title': 'EPYC 2 CPUs',
+          'description': 'Industry Leading, High-Frequency, and Capable of the most Strenuous Workloads.'
+        },
+        {
+          'icon':
+          {
+            'filename': 'cloud-computing-servers',
+            'alt': 'Cloud Computing Servers'
+          },
+          'title': 'Triple Replicated',
+          'description': 'A copy of the VPS data is replicated across three physically separate servers, offering better protection against data loss versus RAID.'
+        },
+        {
+          'icon':
+          {
+            'filename': 'time-1',
+            'alt': 'Time'
+          },
+          'title': 'High Availability',
+          'description': 'Backed by a redundant infrastructure, your vital compute resources are available when you need them.'
+        },
+        {
+          'icon':
+          {
+            'filename': 'global-connection',
+            'alt': 'Global Connection'
+          },
+          'title': 'Global Connectivity',
+          'description': 'Multiple major networks and internet exchanges ensure your virtual infrastructure reaches all corners of the globe with the best speeds possible.'
+        },
+        {
+          'icon':
+          {
+            'filename': 'protect',
+            'alt': 'Protect'
+          },
+          'title': 'High Speed Networking',
+          'description': 'Virtual Machines have a network connection speed of 1 Gbps with DDoS Protection well in excess of 1 Tbps, ensuring fast connectivity for all legitimate traffic.'
+        }
+      ]
+    %}
+
     <section class="features section">
       <div class="container">
         <h2>Included Features</h2>
         <p>(Others Call Them "Extras")</p>
             
         <div class="features">
+          {% for feature in features %}
           <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/amd_epyc.svg" alt="AMD EPYC Icon"></div>
-            <div class="title">EPYC 2 CPUs</div>
-            <div class="description">Industry Leading, High-Frequency, and Capable of the most Strenuous Workloads.</div>
+            <div class="icon"><img src="{{ icons_url }}/{{ feature.icon.filename }}.svg" alt="{{ feature.icon.alt }} Icon"></div>
+            <div class="title">{{ feature.title }}</div>
+            <div class="description">{{ feature.description }}</div>
           </div>
-            
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/cloud-computing-servers.svg" alt="Cloud Computing Servers Icon"></div>
-            <div class="title">Triple Replicated</div>
-            <div class="description">A copy of the VPS data is replicated across three physically separate servers, offering better protection against data loss versus RAID.</div>
-          </div>
-            
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/time-1.svg" alt="Time Icon"></div>
-            <div class="title">High Availability</div>
-            <div class="description">Backed by a redundant infrastructure, your vital compute resources are available when you need them.</div>
-          </div>
-            
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/global-connection.svg" alt="Global Connection Icon"></div>
-            <div class="title">Best Global Connectivity</div>
-            <div class="description">Multiple major networks and internet exchanges ensure your virtual infrastructure reaches all corners of the globe with the best speeds possible.</div>
-          </div>
-            
-          <div class="feature">
-            <div class="icon"><img src="https://images.staticly.cc/icons/protect.svg" alt="Protect Icon"></div>
-            <div class="title">High-Speed Networking</div>
-            <div class="description">Virtual Machines have a network connection speed of 1 Gbps with DDoS Protection well in excess of 1 Tbps, ensuring fast connectivity for all legitimate traffic.</div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
+
+    {%
+      set locations =
+      [
+        {
+          'city': 'Amsterdam',
+          'country': 'NL',
+          'status': 'Online'
+        },
+        {
+          'city': 'London',
+          'country': 'GB',
+          'status': 'Online'
+        },
+        {
+          'city': 'New York',
+          'country': 'US',
+          'status': 'Online'
+        },
+        {
+          'city': 'Phoenix',
+          'country': 'US',
+          'status': 'Online'
+        }
+      ]
+    %}
         
     <section class="locations section">
       <div class="container">
         <h2>Available Locations</h2>
-        <p>Amsterdam NL, London GB, New York US, Phoenix US</p>
+        <p>{% for location in locations %}{{ location.city }} {{ location.country }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
               
-        <div class="location-map">
+        <div class="location-map" style="background-image: url('{{ icons_url }}/world-map.svg');">
           <div class="locations">
+            {% for location in locations %}
             <div class="location">
               <div class="spot"></div>
 
               <div class="info">
                 <div class="name">
-                  Amsterdam, NL
+                  {{ location.city }}, {{ location.country }}
                 </div>
                                   
                 <div class="online">
-                  Online
+                  {{ location.status }}
                 </div>
               </div>
             </div>
-              
-            <div class="location">
-              <div class="spot"></div>
-
-              <div class="info">
-                <div class="name">
-                  London, GB
-                </div>
-                
-                <div class="online">
-                  Online
-                </div>
-              </div>
-            </div>
-
-            <div class="location">
-              <div class="spot"></div>
-
-              <div class="info">
-                <div class="name">
-                  New York, US
-                </div>
-                <div class="online">
-                  Online
-                </div>
-              </div>
-            </div>
-              
-            <div class="location">
-              <div class="spot"></div>
-
-              <div class="info">
-                <div class="name">
-                  Phoenix, US
-                </div>
-                <div class="online">
-                  Online
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
     </section>
-        
+    
+    {%
+      set faqs =
+      [
+        {
+          'question': 'Is the VPS managed or unmanaged?',
+          'answer': 'It is unmanaged. This means we are only responsibile for the hardware, network, and infrastructure. The software and data on the VPS is your responsibility.'
+        },
+        {
+          'question': 'Do you offer a VPS backup service?',
+          'answer': 'No, there is no backup service provided. We strongly encourage you to maintain your own backups for peace of mind and disaster recovery.'
+        },
+        {
+          'question': 'What happens when I exceed my Data Transfer allowance?',
+          'answer': 'Your service will continue running, and you will be billed for overages on your next monthly bill at £0.45 per GigaByte used.'
+        },
+        {
+          'question': 'Can the VPS be upgraded or downgraded later?',
+          'answer': 'Unfortunately not. We are looking into ways to make this possible, however, the only option available right now is to place an order for another VPS with the new specification, transfer everything over to the new VPS, and most likely cancel the original VPS order if you have no further use for it.'
+        },
+        {
+          'question': 'How long does it take for a VPS order to get provisioned?',
+          'answer': 'Deployment is normally complete within seconds of receipt of full payment. If it has been a while since order was placed and you still do not have your VPS, please get in touch and we shall look into it for you.'
+        },
+        {
+          'question': 'Why Triple Replication over RAID?',
+          'answer': 'We consider the data on our Premium VPS platform to be of utmost importance. The possibility of data loss is orders of magnitude lower than that of even a RAID Array, because to lose data, not only is a simultaneous failure of 3 drives needed (an extremely rare occurance where a RAID Array would lose data), it would need to be the 3 drives that store the same chunks of data as each other, across 3 physically separate servers.'
+        }
+      ]
+    %}
+
     <section class="faqs section">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
         <p>Click or tap on a question to get the answer.</p>
-        
+
         <div class="faqs">
-          <div class="faq">
-            <input type="checkbox" class="toggle" id="faq_toggle_1">
-            
-            <div class="question">
-              <label for="faq_toggle_1">
-                Is the VPS managed or unmanaged?
-              </label>
+          {% for faq in faqs %}
+            {% set id = 'faq_toggle_' + loop.index %}
+            <div class="faq">
+              <input type="checkbox" class="toggle" id="{{ id }}">
+
+              <div class="question">
+                <label for="{{ id }}">
+                  {{ faq.question }}
+                </label>
+              </div>
+
+              <div class="answer">
+                {{ faq.answer }}
+              </div>
             </div>
-            
-            <div class="answer">It is unmanaged. This means we are only responsibile for the hardware, network, and infrastructure. The software and data on the VPS is your responsibility.</div>
-          </div>
-            
-          <div class="faq">
-            <input type="checkbox" class="toggle" id="faq_toggle_2">
-                        
-            <div class="question">
-              <label for="faq_toggle_2">
-                Do you offer a VPS backup service?
-              </label>
-            </div>
-            
-            <div class="answer">No, there is no backup service provided. We strongly encourage you to maintain your own backups for peace of mind and disaster recovery.</div>
-          </div>
-            
-          <div class="faq">
-            <input type="checkbox" class="toggle" id="faq_toggle_3">
-            
-            <div class="question">
-              <label for="faq_toggle_3">
-                What happens when I exceed my Data Transfer allowance?
-              </label>
-            </div>
-            
-            <div class="answer">Your service will continue running, and you will be billed for overages on your next monthly bill at £0.45 per GigaByte used.</div>
-          </div>
-                    
-          <div class="faq">
-            <input type="checkbox" class="toggle" id="faq_toggle_4">
-            
-            <div class="question">
-              <label for="faq_toggle_4">
-                Can the VPS be upgraded or downgraded later?
-              </label>
-            </div>
-                        
-            <div class="answer">Unfortunately not. We are looking into ways to make this possible, however, the only option available right now is to place an order for another VPS with the new specification, transfer everything over to the new VPS, and most likely cancel the original VPS order if you have no further use for it.</div>
-          </div>
-            
-          <div class="faq">
-            <input type="checkbox" class="toggle" id="faq_toggle_5">
-            
-            <div class="question">
-              <label for="faq_toggle_5">
-                How long does it take for a VPS order to get provisioned?
-              </label>
-            </div>
-            
-            <div class="answer">Deployment is normally complete within seconds of receipt of full payment. If it has been a while since order was placed and you still don't have your VPS, please get in touch and we shall look into it for you.</div>
-          </div>
-            
-          <div class="faq">
-            <input type="checkbox" class="toggle" id="faq_toggle_6">
-            
-            <div class="question">
-              <label for="faq_toggle_6">
-                Why Triple Replication over RAID?
-              </label>
-            </div>
-            
-            <div class="answer">We consider the data on our Premium VPS platform to be of utmost importance. The possibility of data loss is orders of magnitude lower than that of even a RAID Array, because to lose data, not only is a simultaneous failure of 3 drives needed (an extremely rare occurance where a RAID Array would lose data), it would need to be the 3 drives that store the same chunks of data as each other, across 3 physically separate servers.</div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>

@@ -1,65 +1,117 @@
 ---
 description: Welcome to Persona Clix, Provider of Premium Hosting Services - Get Started Today for £1!
 layout: "base.njk"
+hero:
+  class: 'home'
+  title: 'Welcome to Persona Clix'
+  description: 'Provider of Premium Hosting Services'
+  list_icon: 'cloud_white'
+  list:
+  - 'Web Hosting'
+  - 'VPS Hosting'
+  button:
+    href: '#services'
+    text: 'View More'
+  recommendedby:
+    name: 'Tara McKale'
+    url: 'https://www.taramckale.ict.rocks'
+  background_image: 'https://images.staticly.cc/avatars/taramckale_personaclix_representitive.png'
 ---
 
-    <section class="hero home">
-      <div class="container">
-        <div class="info">
-          <h1>Welcome to Persona Clix</h1>
-          <p>Provider of Premium Hosting Services</p>
-          <ul style="list-style-image: url('https://images.staticly.ict.rocks/ui/cloud_white.png')">
-            <li>Web Hosting</li>
-            <li>VPS Hosting</li>
-          </ul>
-          <div class="button-price">
-            <div class="button">
-              <a href="#services">View More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="promo-image"></div>
-
-        <div class="recommendedby">Recommended by <b><a href="https://www.taramckale.ict.rocks" target="_blank" rel="nofollow">Tara McKale</a></b></div>
-      </div>
-    </section>
-
+    {%
+      set services =
+      [
+        {
+          'icon':
+          {
+            'filename': 'hosting',
+            'alt': 'Hosting'
+          },
+          'title': 'Web Hosting',
+          'features':
+          [
+            {
+              'highlight': 'Generous',
+              'text': 'Web Space'
+            },
+            {
+              'highlight': 'Unlimited',
+              'text': 'Data Transfer'
+            },
+            {
+              'highlight': 'Free',
+              'text': 'Email Hosting'
+            },
+            {
+              'highlight': 'Daily',
+              'text': 'Off-Site Backups'
+            },
+            {
+              'highlight': 'Free',
+              'text': 'SSL Certificates'
+            },
+            {
+              'highlight': 'Fully Redundant',
+              'text': 'Servers'
+            }
+          ],
+          'url': '/webhosting'
+        },
+        {
+          'icon':
+          {
+            'filename': 'cloud-servers',
+            'alt': 'Cloud Servers'
+          },
+          'title': 'VPS Hosting',
+          'features':
+          [
+            {
+              'highlight': 'NVMe',
+              'text': 'Storage'
+            },
+            {
+              'highlight': 'Generous',
+              'text': 'Data Transfer Allowance'
+            },
+            {
+              'highlight': '1 Gbps',
+              'text': 'Network Speed'
+            },
+            {
+              'highlight': 'Linux',
+              'text': 'Operating System'
+            },
+            {
+              'highlight': 'Fully Redundant',
+              'text': 'Infrastructure'
+            }
+          ],
+          'url': '/vps'
+        }
+      ]
+    %}
+    
     <section class="services section">
       <div class="container">
         <a name="services"></a>
         <h2>Hosting Services</h2>
         <p>For Your Next Project</p>
         <div class="services">
+          {% for service in services %}
           <div class="service">
             <div class="icon">
-              <img src="https://images.staticly.cc/icons/hosting.svg" alt="Hosting Icon">
+              <img src="{{ icons_url }}/{{ service.icon.filename }}.svg" alt="{{ service.icon.alt }} Icon">
             </div>
-            <h3>Web Hosting</h3>
+            <h3>{{ service.title }}</h3>
             <ul>
-              <li><b>Generous</b> Web Space</li>
-              <li><b>Unlimited</b> Data Transfer</li>
-              <li><b>Free</b> Email Hosting</li>
-              <li><b>Daily</b> Off-Site Backups</li>
-              <li><b>Free</b> SSL Certificates</li>
-              <li><b>Fully Redundant</b> Servers</li>
+              {% for feature in service.features %}
+              <li><b>{{ feature.highlight }}</b> {{ feature.text }}</li>
+              {% endfor %}
             </ul>
-            <p class="button"><a href="/webhosting">Find Out More</a></p>
+            <p class="button"><a href="{{ service.url }}">Find Out More</a></p>
           </div>
-          <div class="service">
-            <div class="icon">
-              <img src="https://images.staticly.cc/icons/cloud-servers.svg" alt="Cloud Servers Icon">
-            </div>
-            <h3>VPS Hosting</h3>
-            <ul>
-              <li><b>NVMe</b> Storage</li>
-              <li><b>Generous</b> Data Transfer Allowance</li>
-              <li><b>1 Gbps</b> Network Speed</li>
-              <li><b>Linux</b> Operating System</li>
-              <li><b>Fully Redundant</b> Infrastructure</li>
-            </ul>
-            <p class="button"><a href="/vps">Find Out More</a></p>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>

@@ -1,5 +1,11 @@
 {
   "stylesheets": [
+    "https://webfonts.staticly.cc/montserrat/montserrat.css",
     "/assets/css/main.css"
-  ]
+  ],
+  "icons_url": "https://images.staticly.cc/icons",
+  "avatars_url": "https://images.staticly.cc/avatars",
+  "ui_url": "https://images.staticly.cc/ui",
+  "logos_url": "https://images.staticly.cc/logos",
+  "client_url": "https://client.personaclix.com"
 }
