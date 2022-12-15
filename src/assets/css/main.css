@@ -572,7 +572,7 @@ img
   display: block;
 }
 
-.packages.section .package .button.order a
+.section .button a
 {
   text-align: center;
   text-decoration: none;
@@ -587,7 +587,7 @@ img
   text-transform: uppercase;
 }
 
-.packages.section .package .button.order a:hover
+.section .button a:hover
 {
   background-color: var( --color-positive-hover );
 }
