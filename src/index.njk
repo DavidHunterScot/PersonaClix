@@ -1,119 +1,22 @@
 ---
-description: Welcome to Persona Clix, Provider of Premium Hosting Services - Get Started Today for £1!
+description: Welcome to {{ site_title }}, {{ site_tagline }}!
 layout: "base.njk"
 hero:
   class: 'home'
-  title: 'Welcome to Persona Clix'
-  description: 'Provider of Premium Hosting Services'
+  title: 'Welcome to {{ site_title }}'
+  description: '{{ site_tagline }}'
   list_icon: 'cloud_white'
   list:
-  - 'Web Hosting'
-  - 'VPS Hosting'
-  button:
-    href: '#services'
-    text: 'View More'
+  - Under Construction
   recommendedby:
     name: 'Tara McKale'
     url: 'https://www.taramckale.ict.rocks'
   background_image: 'https://images.staticly.cc/avatars/taramckale_personaclix_representitive.png'
 ---
-
-    {%
-      set services =
-      [
-        {
-          'icon':
-          {
-            'filename': 'hosting',
-            'alt': 'Hosting'
-          },
-          'title': 'Web Hosting',
-          'features':
-          [
-            {
-              'highlight': 'Generous',
-              'text': 'Web Space'
-            },
-            {
-              'highlight': 'Unlimited',
-              'text': 'Data Transfer'
-            },
-            {
-              'highlight': 'Free',
-              'text': 'Email Hosting'
-            },
-            {
-              'highlight': 'Daily',
-              'text': 'Off-Site Backups'
-            },
-            {
-              'highlight': 'Free',
-              'text': 'SSL Certificates'
-            },
-            {
-              'highlight': 'Fully Redundant',
-              'text': 'Servers'
-            }
-          ],
-          'url': '/webhosting'
-        },
-        {
-          'icon':
-          {
-            'filename': 'cloud-servers',
-            'alt': 'Cloud Servers'
-          },
-          'title': 'VPS Hosting',
-          'features':
-          [
-            {
-              'highlight': 'NVMe',
-              'text': 'Storage'
-            },
-            {
-              'highlight': 'Generous',
-              'text': 'Data Transfer Allowance'
-            },
-            {
-              'highlight': '1 Gbps',
-              'text': 'Network Speed'
-            },
-            {
-              'highlight': 'Linux',
-              'text': 'Operating System'
-            },
-            {
-              'highlight': 'Fully Redundant',
-              'text': 'Infrastructure'
-            }
-          ],
-          'url': '/vps'
-        }
-      ]
-    %}
     
-    <section class="services section">
+    <section class="section">
       <div class="container">
-        <a name="services"></a>
-        <h2>Hosting Services</h2>
-        <p>For Your Next Project</p>
-        <div class="services">
-          {% for service in services %}
-          <div class="service">
-            <div class="icon">
-              <img src="{{ icons_url }}/{{ service.icon.filename }}.svg" alt="{{ service.icon.alt }} Icon">
-            </div>
-            <h3>{{ service.title }}</h3>
-            <ul>
-              {% for feature in service.features %}
-              <li><b>{{ feature.highlight }}</b> {{ feature.text }}</li>
-              {% endfor %}
-            </ul>
-            <p class="button"><a href="{{ service.url }}">Find Out More</a></p>
-          </div>
-          {% endfor %}
-        </div>
+        <h2>Under Construction</h2>
+        <p>Please check back later.</p>
       </div>
     </section>
-
-    {% include 'why.njk' %}

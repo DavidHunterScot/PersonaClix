@@ -7,5 +7,11 @@
   "avatars_url": "https://images.staticly.cc/avatars",
   "ui_url": "https://images.staticly.cc/ui",
   "logos_url": "https://images.staticly.cc/logos",
-  "client_url": "https://client.personaclix.com"
+  "client_url": "https://client.personaclix.com",
+  "site_title": "Persona Clix",
+  "site_tagline": "Provider of Premium Website Solutions",
+  "site_owner": "David Hunter",
+  "site_owner_url": "https://davidhunter.scot",
+  "launch_year": "2016",
+  "current_year": "2022"
 }
