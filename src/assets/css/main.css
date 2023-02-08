@@ -257,7 +257,7 @@ img
 
 .hero.home .container
 {
-    position: relative;
+  position: relative;
 }
 
 .hero.home .container
@@ -970,6 +970,7 @@ img
   .hero.home .container
   {
     background-size: 450px;
+    min-height: 520px;
   }
   
   .hero .info
@@ -995,7 +996,6 @@ img
   .hero .container
   {
     flex-direction: row;
-    min-height: 520px;
   }
 
   .hero .promo-image
