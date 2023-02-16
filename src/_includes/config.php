@@ -1,7 +1,7 @@
 <?php
 
-$webfonts_url = "https://webfonts.staticly.ict.rocks";
-$images_url = "https://images.staticly.ict.rocks";
+$webfonts_url = "/assets/webfonts";
+$images_url = "/assets/images";
 
 $stylesheets[] = $webfonts_url . "/montserrat/montserrat.css";
 $stylesheets[] = "/assets/css/main.css";
