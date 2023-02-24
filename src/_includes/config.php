@@ -12,7 +12,7 @@ $stylesheets[] = $w3css_url . "/w3-colors-flat.css";
 $stylesheets[] = $w3css_url . "/w3-colors-metro.css";
 $stylesheets[] = $webfonts_url . "/montserrat/montserrat.css";
 
-$icons_url = $images_url . "/icons";
+$icons_url = "/assets/images/icons";
 $avatars_url = $images_url . "/avatars";
 $ui_url = $images_url . "/ui";
 $logos_url = $images_url . "/logos";
