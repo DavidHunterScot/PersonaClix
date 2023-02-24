@@ -1,8 +1,21 @@
-var email_addresses = document.getElementsByClassName( 'email_address' );
+var contact_methods = document.getElementsByClassName( 'method' );
 
-for( let i = 0; i < email_addresses.length; i++ )
+for( let i = 0; i < contact_methods.length; i++ )
 {
-    var the_email_address = email_addresses[ i ].innerHTML.replaceAll( ' [at] ', '@' ).replaceAll( ' [dot] ', '.' );
+    var email_addresses = contact_methods[ i ].getElementsByClassName( 'email_address' );
 
-    email_addresses[ i ].innerHTML = the_email_address;
+    if( email_addresses.length == 1 )
+    {
+        var email_address = email_addresses[ 0 ].innerHTML.replaceAll( ' [at] ', '@' ).replaceAll( ' [dot] ', '.' );
+
+        email_addresses[ 0 ].innerHTML = email_address;
+
+        var email_links = contact_methods[ i ].getElementsByClassName( 'email_link' );
+
+        if( email_links.length == 1 )
+        {
+            email_links[ 0 ].href = "mailto:" + email_address;
+            email_links[ 0 ].target = "_blank";
+        }
+    }
 }

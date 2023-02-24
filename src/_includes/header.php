@@ -1,39 +1,35 @@
-        <nav class="top-nav">
-            <div class="container">
-                <input type="checkbox" id="top-nav-toggle" class="nav-toggle">
-                <ul>
-                    <li><a href="/contact" class="button">Contact</a></li>
-                </ul>
-                <label for="top-nav-toggle" class="nav-toggle-label"><span></span></label>
+        <nav class="top-nav w3-flat-midnight-blue w3-small">
+            <div class="w3-auto w3-padding w3-stretch container">
+                <div class="w3-bar">
+                    <a href="/contact" class="button w3-bar-item w3-button w3-right w3-flat-wet-asphalt w3-hover-flat-wet-asphalt w3-hover-text-white">Contact</a>
+                </div>
             </div>
         </nav>
 
-        <header class="site-header">
-            <div class="container">
-                <div class="logo">
-                    <a href="/"><img src="<?php echo $logos_url; ?>/personaclix_pcdh_logo_dark.png" alt="Persona Clix Logo (Dark)"></a>
+        <header class="site-header w3-flat-wet-asphalt">
+            <div class="container w3-auto w3-padding w3-row">
+                <div class="logo w3-col l3 m4">
+                    <a href="/"><img src="<?php echo $logos_url; ?>/personaclix_pcdh_logo_light.png" alt="Persona Clix Logo (Dark)" class="w3-image"></a>
                 </div>
 
-                <div class="navbar">
-                    <input type="checkbox" id="main-nav-toggle" class="nav-toggle">
-                    <ul>
-                        <li><a href="/"<?php if( isset( $current_page ) && $current_page == "home" ): ?> class="current"<?php endif; ?>>Home</a></li>
-                    </ul>
-                    <label for="main-nav-toggle" class="nav-toggle-label"><span></span></label>
-                </div>
+                <nav class="navbar w3-col l9 m8 w3-margin-top">
+                    <div class="w3-bar">
+                        <a href="/" class="w3-bar-item w3-button w3-hover-flat-midnight-blue w3-hover-text-white w3-right w3-mobile<?php if( isset( $current_page ) && $current_page == "home" ): ?> w3-flat-midnight-blue current<?php endif; ?>">Home</a>
+                    </div>
+                </nav>
             </div>
         </header>
 
         <?php if( isset( $hero ) && is_array( $hero ) ): ?>
-            <section class="hero<?php if( isset( $hero['class'] ) && $hero['class'] ) echo ' ' . $hero['class']; ?>">
-                <div class="container"<?php if( isset( $hero['background_image'] ) && $hero['background_image'] ): ?> style="background-image: url( '<?php echo $hero['background_image']; ?>' );"<?php endif; ?>>
-                    <div class="info">
+            <section class="hero w3-flat-midnight-blue<?php if( isset( $hero['class'] ) && $hero['class'] ) echo ' ' . $hero['class']; ?>">
+                <div class="container w3-auto w3-row"<?php if( isset( $hero['background_image'] ) && $hero['background_image'] ): ?> style="min-height: 450px; background-repeat: no-repeat; background-position: top right; background-image: url( '<?php echo $hero['background_image']; ?>' );"<?php endif; ?>>
+                    <div class="info w3-padding w3-padding-64 w3-col l8">
                         <?php if( isset( $hero['title'] ) && $hero['title'] ): ?>
-                            <h1><?php echo str_replace( '{{ site_title }}', $site_title, $hero['title'] ); ?></h1>
+                            <h1 class="w3-xlarge"><b><?php echo str_replace( '{{ site_title }}', $site_title, $hero['title'] ); ?></b></h1>
                         <?php endif; ?>
 
                         <?php if( isset( $hero['description'] ) && $hero['description'] ): ?>
-                            <p><?php echo str_replace( '{{ site_tagline }}', $site_tagline, $hero['description'] ); ?></p>
+                            <div class="w3-xxxlarge"><b><?php echo str_replace( '{{ site_tagline }}', $site_tagline, $hero['description'] ); ?></b></div>
                         <?php endif; ?>
 
                         <?php if( isset( $hero['list'] ) && is_array( $hero['list'] ) && count( $hero['list'] ) > 0 ): ?>
@@ -57,19 +53,19 @@
                                 <?php endif; ?>
                             </div>
                         <?php endif; ?>
-                    </div>
 
-                    <div class="promo-image">
-                        <?php if( isset( $hero['promo_image'] ) && is_array( $hero['promo_image'] ) ): ?>
-                            <img src="<?php echo $icons_url; ?>/<?php if( isset( $hero['promo_image']['filename'] ) ) echo $hero['promo_image']['filename']; ?>.svg" alt="<?php if( isset( $hero['promo_image']['alt'] ) ) echo $hero['promo_image']['alt']; ?> Icon">
+                        <?php if( isset( $hero['recommendedby'] ) && is_array( $hero['recommendedby'] ) ): ?>
+                            <div class="recommendedby">
+                                Recommended by <b><a href="<?php if( isset( $hero['recommendedby']['url'] ) ) echo $hero['recommendedby']['url']; ?>" target="_blank" rel="nofollow"><?php if( isset( $hero['recommendedby']['name'] ) ) echo $hero['recommendedby']['name']; ?></a></b>.
+                            </div>
                         <?php endif; ?>
                     </div>
 
-                    <?php if( isset( $hero['recommendedby'] ) && is_array( $hero['recommendedby'] ) ): ?>
-                        <div class="recommendedby">
-                            Recommended by <b><a href="<?php if( isset( $hero['recommendedby']['url'] ) ) echo $hero['recommendedby']['url']; ?>" target="_blank" rel="nofollow"><?php if( isset( $hero['recommendedby']['name'] ) ) echo $hero['recommendedby']['name']; ?></a></b>
-                        </div>
-                    <?php endif; ?>
+                    <div class="promo-image w3-col l4 w3-margin-top w3-center">
+                        <?php if( isset( $hero['promo_image'] ) && is_array( $hero['promo_image'] ) ): ?>
+                            <img src="<?php if( isset( $hero['promo_image']['url'] ) ) echo $hero['promo_image']['url']; ?>" alt="<?php if( isset( $hero['promo_image']['alt'] ) ) echo $hero['promo_image']['alt']; ?>" class="w3-image">
+                        <?php endif; ?>
+                    </div>
                 </div>
             </section>
         <?php endif; ?>

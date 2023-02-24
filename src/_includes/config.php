@@ -1,10 +1,16 @@
 <?php
 
-$webfonts_url = "/assets/webfonts";
-$images_url = "/assets/images";
+$staticly_domain = "staticly.ict.rocks";
 
+$w3css_url = "https://w3css." . $staticly_domain;
+$webfonts_url = "https://webfonts." . $staticly_domain;
+$images_url = "https://images." . $staticly_domain;
+
+$stylesheets = array();
+$stylesheets[] = $w3css_url . "/4.15/w3.css";
+$stylesheets[] = $w3css_url . "/w3-colors-flat.css";
+$stylesheets[] = $w3css_url . "/w3-colors-metro.css";
 $stylesheets[] = $webfonts_url . "/montserrat/montserrat.css";
-$stylesheets[] = "/assets/css/main.css";
 
 $icons_url = $images_url . "/icons";
 $avatars_url = $images_url . "/avatars";
