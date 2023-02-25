@@ -9,14 +9,11 @@ $page_content = function()
 {
 ?>
 
-        <section class="section packages" style="padding-top: 8rem; padding-bottom: 8rem;">
-            <div class="container">
-                <h2>Not Found (404)</h2>
-                <p style="color: black;">Sorry, there is nothing found here.</p>
-                <p style="text-align: center;">Perhaps the homepage can help you get back on track!</p>
-                <div class="button" style="margin-top: 3rem; margin-bottom: 3rem;">
-                    <a href="/" style="max-width: 400px; margin: auto;">Homepage</a>
-                </div>
+        <section class="section packages w3-flat-midnight-blue" style="padding-top: 8rem; padding-bottom: 8rem;">
+            <div class="container w3-auto w3-padding w3-center">
+                <h2 class="w3-xxxlarge"><b>Not Found (404)</b></h2>
+                <p class="w3-xlarge">Sorry, there is nothing found here.</p>
+                <p>Perhaps the <a href="/">homepage</a> can help you get back on track!</p>
             </div>
         </section>
 

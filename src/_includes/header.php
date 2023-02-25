@@ -21,7 +21,7 @@
         </header>
 
         <?php if( isset( $hero ) && is_array( $hero ) ): ?>
-            <section class="hero w3-flat-midnight-blue<?php if( isset( $hero['class'] ) && $hero['class'] ) echo ' ' . $hero['class']; ?>">
+            <section class="hero w3-flat-midnight-blue<?php if( isset( $hero['class'] ) && $hero['class'] ) echo ' ' . $hero['class']; ?>" style="clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px)); padding-bottom: 50px;">
                 <div class="container w3-auto w3-row"<?php if( isset( $hero['background_image'] ) && $hero['background_image'] ): ?> style="min-height: 450px; background-repeat: no-repeat; background-position: top right; background-image: url( '<?php echo $hero['background_image']; ?>' );"<?php endif; ?>>
                     <div class="info w3-padding w3-padding-64 w3-col l8">
                         <?php if( isset( $hero['title'] ) && $hero['title'] ): ?>
@@ -61,7 +61,7 @@
                         <?php endif; ?>
                     </div>
 
-                    <div class="promo-image w3-col l4 w3-margin-top w3-center">
+                    <div class="promo-image w3-margin-top w3-col l4 w3-center" style="margin-bottom: -50px;">
                         <?php if( isset( $hero['promo_image'] ) && is_array( $hero['promo_image'] ) ): ?>
                             <img src="<?php if( isset( $hero['promo_image']['url'] ) ) echo $hero['promo_image']['url']; ?>" alt="<?php if( isset( $hero['promo_image']['alt'] ) ) echo $hero['promo_image']['alt']; ?>" class="w3-image">
                         <?php endif; ?>

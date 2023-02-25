@@ -14,7 +14,7 @@
         <?php include 'stylesheets.php'; ?>
     </head>
     
-    <body>
+    <body class="w3-light-gray">
         <?php include 'header.php'; ?>
 
         <?php include 'content.php'; ?>

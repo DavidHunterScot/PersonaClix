@@ -14,7 +14,7 @@ $page_content = function()
     include __DIR__ . DIRECTORY_SEPARATOR . '_includes' . DIRECTORY_SEPARATOR . 'config.php';
 ?>
 
-        <section class="contact section w3-light-gray w3-padding-64">
+        <section class="contact section w3-padding-64">
             <div class="container w3-auto w3-padding">
                 <div class="methods w3-row">
                     <div class="method w3-quarter w3-white w3-round-large w3-card w3-padding-large">

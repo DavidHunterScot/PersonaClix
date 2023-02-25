@@ -21,8 +21,8 @@ $page_content = function()
     include __DIR__ . DIRECTORY_SEPARATOR . "_includes" . DIRECTORY_SEPARATOR . "config.php";
 ?>
 
-        <section class="section w3-light-gray w3-text-dark-gray w3-padding-large">
-            <div class="container w3-center w3-white">
+        <section class="section w3-text-dark-gray w3-padding-large">
+            <div class="container w3-center">
                 <div class="w3-auto w3-row-padding">
                     <div class="w3-quarter">
                         <p><img src="<?php echo $icons_url; ?>/quill.svg" alt="Quill Icon" style="max-width: 150px;"></p>
