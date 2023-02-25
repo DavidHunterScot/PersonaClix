@@ -18,7 +18,7 @@
                 <div class="column w3-quarter w3-bar-block w3-padding-16 w3-center">
                     <a href="https://www.youtube.com/personaclixofficial" target="_blank" rel="nofollow" class="w3-bar-item w3-button">YouTube Channel</a>
                     <a href="https://github.com/DavidHunterScot/PersonaClix" target="_blank" rel="nofollow" class="w3-bar-item w3-button">Source Code on GitHub</a>
-                    <a href="https://stats.uptimerobot.com/Pj0PJi04RR" target="_blank" rel="nofollow" class="w3-bar-item w3-button">Service Uptime</a>
+                    <a href="https://stats.uptimerobot.com/A6BwOUZzLG" target="_blank" rel="nofollow" class="w3-bar-item w3-button">Service Uptime</a>
                 </div>
             </div>
         </footer>
