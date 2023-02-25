@@ -26,7 +26,7 @@ $page_content = function()
                             <a href="#" id="email_link" class="w3-button w3-amber w3-round-large w3-block email_link">David Hunter</a>
                         </div>
 
-                        <p class="email_address" style="overflow-x: auto;">david [dot] hunter [at] personaclix [dot] com</p>
+                        <p class="email_address w3-center" style="overflow-x: auto; white-space: nowrap;">david [dot] hunter [at] themailbox [dot] io</p>
                     </div>
                 </div>
             </div>
