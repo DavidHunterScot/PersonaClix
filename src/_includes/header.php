@@ -63,7 +63,7 @@
 
                     <?php if( isset( $hero['promo_image'] ) && is_array( $hero['promo_image'] ) ): ?>
                     <div class="promo-image w3-margin-top w3-col l4 w3-center" style="margin-bottom: -50px;">
-                        <img style="width: 380px; max-width: 380px;" src="<?php if( isset( $hero['promo_image']['url'] ) ) echo $hero['promo_image']['url']; ?>" alt="<?php if( isset( $hero['promo_image']['alt'] ) ) echo $hero['promo_image']['alt']; ?>" class="w3-image">
+                        <img style="max-width: 115%;" src="<?php if( isset( $hero['promo_image']['url'] ) ) echo $hero['promo_image']['url']; ?>" alt="<?php if( isset( $hero['promo_image']['alt'] ) ) echo $hero['promo_image']['alt']; ?>" class="w3-image">
                     </div>
                     <?php endif; ?>
                 </div>
