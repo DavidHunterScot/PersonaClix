@@ -8,7 +8,7 @@ $stylesheets = array();
 $stylesheets[] = $w3css_url . "/4.15/w3.css";
 $stylesheets[] = $w3css_url . "/w3-colors-flat.css";
 $stylesheets[] = $w3css_url . "/w3-colors-metro.css";
-$stylesheets[] = $webfonts_url . "/montserrat/montserrat.css";
+$stylesheets[] = $webfonts_url . "/poppins/poppins.css";
 $stylesheets[] = "/assets/css/custom.css";
 
 $icons_url = "/assets/images/icons";
