@@ -29,7 +29,7 @@
                         <?php endif; ?>
 
                         <?php if( isset( $hero['description'] ) && $hero['description'] ): ?>
-                            <div class="w3-xxxlarge"><b><?php echo str_replace( '{{ site_tagline }}', $site_tagline, $hero['description'] ); ?></b></div>
+                            <div class="w3-xxxlarge w3-wide"><b><?php echo str_replace( '{{ site_tagline }}', $site_tagline, $hero['description'] ); ?></b></div>
                         <?php endif; ?>
 
                         <?php if( isset( $hero['list'] ) && is_array( $hero['list'] ) && count( $hero['list'] ) > 0 ): ?>
