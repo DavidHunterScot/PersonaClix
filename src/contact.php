@@ -45,7 +45,7 @@ $page_content = function()
 
                         <p><b>Tara McKale</b><br>Promotional Mascot</p>
 
-                        <p><a href="#" class="email_address" email-address="tara [dot] mckale [at] personaclix [dot] com"></a> <a href="https://taramckale.mywebaddress.me" target="_blank">Web</a></p>
+                        <p><a href="#" class="email_address" email-address="tara [dot] mckale [at] personaclix [dot] com"></a> <a href="https://www.taramckale.ict.rocks" target="_blank">Web</a></p>
                     </div>
                 </div>
             </div>

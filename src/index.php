@@ -10,7 +10,7 @@ $hero['class'] = "home";
 $hero['title'] = "Welcome to {{ site_title }}";
 $hero['description'] = "{{ site_tagline }}";
 $hero['recommendedby']['name'] = "Tara McKale";
-$hero['recommendedby']['url'] = "https://taramckale.mywebaddress.me";
+$hero['recommendedby']['url'] = "https://www.taramckale.ict.rocks";
 $hero['promo_image']['url'] = $avatars_url . "/taramckale_personaclix_representitive.png";
 $hero['promo_image']['alt'] = "Tara McKale Photo";
 
