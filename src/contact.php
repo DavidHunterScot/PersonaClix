@@ -24,7 +24,7 @@ $page_content = function()
 
                         <p>
                             <div><b>General Enquiries</b></div>
-                            <div style="overflow-x: auto; white-space: nowrap;"><span class="email_address">contact [at] personaclix [dot] com</span></div>
+                            <div style="overflow-x: auto; white-space: nowrap;"><span class="email_address">contact [at] personaclix [dot] ict [dot] rocks</span></div>
                         </p>
                     </div>
 
@@ -35,7 +35,7 @@ $page_content = function()
 
                         <p><b>David Hunter</b><br>Service Operator</p>
 
-                        <p><a href="#" class="email_address" email-address="david [dot] hunter [at] personaclix [dot] com"></a> <a href="https://davidhunter.scot" target="_blank">Web</a></p>
+                        <p><a href="#" class="email_address" email-address="david [dot] hunter [at] personaclix [dot] ict [dot] rocks"></a> <a href="https://www.davidhunter.ict.rocks" target="_blank">Web</a></p>
                     </div>
 
                     <div class="method w3-col m3 w3-padding-large w3-center">
@@ -45,7 +45,7 @@ $page_content = function()
 
                         <p><b>Tara McKale</b><br>Promotional Mascot</p>
 
-                        <p><a href="#" class="email_address" email-address="tara [dot] mckale [at] personaclix [dot] com"></a> <a href="https://www.taramckale.ict.rocks" target="_blank">Web</a></p>
+                        <p><a href="#" class="email_address" email-address="tara [dot] mckale [at] personaclix [dot] ict [dot] rocks"></a> <a href="https://www.taramckale.ict.rocks" target="_blank">Web</a></p>
                     </div>
                 </div>
             </div>
