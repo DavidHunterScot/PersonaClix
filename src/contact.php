@@ -1,25 +1,23 @@
-<?php
+---
+page_title: Contact Us
+description: No need to be shy, come and say hello.
 
-$page_title = "Contact Us";
-$description = "No need to be shy, come and say hello.";
+hero: enabled
+hero_class: contact
+hero_title: Contact Us
+hero_description: Get in touch today!
 
-$hero['class'] = "contact";
-$hero['title'] = "Contact Us";
-$hero['description'] = "Get in touch today!";
+javascripts: /assets/js/anti-email-harvesting.js
 
-$javascripts[] = "/assets/js/anti-email-harvesting.js";
-
-$page_content = function()
-{
-    include __DIR__ . DIRECTORY_SEPARATOR . '_includes' . DIRECTORY_SEPARATOR . 'config.php';
-?>
+layout: src/_includes/base.php
+---
 
         <section class="contact section w3-padding-64">
             <div class="container w3-auto w3-padding">
                 <div class="methods w3-row w3-white">
                 <div class="method w3-col m3 w3-padding-large w3-center">
                         <div class="icon w3-bottombar w3-border-amber">
-                            <img src="<?php echo $icons_url; ?>/person-crop-square-fill.svg" alt="Person Crop Square Icon" class="w3-image">
+                            <img src="--- metadata.images_url ------ metadata.icons_uri ---/person-crop-square-fill.svg" alt="Person Crop Square Icon" class="w3-image">
                         </div>
 
                         <p>
@@ -30,17 +28,17 @@ $page_content = function()
 
                     <div class="method w3-col m3 w3-padding-large w3-center">
                         <div class="icon w3-bottombar w3-border-amber">
-                            <img src="<?php echo $avatars_url; ?>/davidhunter_illustration_transparent_1.png" alt="David Hunter Illustration" class="w3-image">
+                            <img src="--- metadata.images_url ------ metadata.avatars_uri ---/davidhunter_illustration_transparent_1.png" alt="David Hunter Illustration" class="w3-image">
                         </div>
 
                         <p><b>David Hunter</b><br>Service Operator</p>
 
-                        <p><a href="#" class="email_address" email-address="david [dot] hunter [at] personaclix [dot] ict [dot] rocks"></a> <a href="https://www.davidhunter.ict.rocks" target="_blank">Web</a></p>
+                        <p><a href="#" class="email_address" email-address="david [dot] hunter [at] personaclix [dot] ict [dot] rocks"></a> <a href="https://www.dah5.com/davidhunter" target="_blank">Web</a></p>
                     </div>
 
                     <div class="method w3-col m3 w3-padding-large w3-center">
                         <div class="icon w3-bottombar w3-border-amber">
-                            <img src="<?php echo $avatars_url; ?>/taramckale_personaclix_representitive.png" alt="Tara McKale Photo" class="w3-image">
+                            <img src="--- metadata.images_url ------ metadata.avatars_uri ---/taramckale_personaclix_representitive.png" alt="Tara McKale Photo" class="w3-image">
                         </div>
 
                         <p><b>Tara McKale</b><br>Promotional Mascot</p>
@@ -50,8 +48,3 @@ $page_content = function()
                 </div>
             </div>
         </section>
-
-<?php
-};
-
-include __DIR__ . DIRECTORY_SEPARATOR . "_includes" . DIRECTORY_SEPARATOR . "base.php";

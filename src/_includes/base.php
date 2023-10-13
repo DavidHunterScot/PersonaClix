@@ -1,4 +1,22 @@
-<?php include __DIR__ . DIRECTORY_SEPARATOR . 'config.php'; ?>
+---
+site_title: Persona Clix
+site_tagline: Provider of Premium Website Solutions
+site_owner: David Hunter
+site_owner_url: https://www.dah5.com/davidhunter
+
+launch_year: 2016
+
+w3css_url: https://w3css.storage.dah5.com
+webfonts_url: https://webfonts.storage.dah5.com
+images_url: https://images.storage.dah5.com
+
+icons_uri: /icons
+avatars_uri: /avatars
+ui_uri: /ui
+logos_uri: /logos
+
+content_placeholder: {{ content }}
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +25,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php if( isset( $page_description ) && $page_description ): ?><meta name="description" content="<?php echo str_replace( [ '{{ site_title }}', '{{ site_tagline }}' ], [ $site_title, $site_tagline ], $page_description ); ?>"><?php endif; ?>
 
-        <title><?php if( isset( $page_title ) && $page_title ) echo $page_title . ' - '; ?><?php echo $site_title; ?><?php if( ! isset( $page_title ) || ! $page_title ) echo ' - ' . $site_tagline; ?></title>
+        <title><?php if( isset( $metadata['page_title'] ) && $metadata['page_title'] ) echo $metadata['page_title'] . ' - '; ?><?php echo $metadata['site_title']; ?><?php if( ! isset( $metadata['page_title'] ) || ! $metadata['page_title'] ) echo ' - ' . $metadata['site_tagline']; ?></title>
 
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
@@ -17,7 +35,7 @@
     <body class="w3-light-gray">
         <?php include 'header.php'; ?>
 
-        <?php include 'content.php'; ?>
+        {{ content }}
 
         <?php include 'footer.php'; ?>
 

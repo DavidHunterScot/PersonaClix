@@ -9,61 +9,39 @@
         <header class="site-header w3-flat-wet-asphalt">
             <div class="container w3-auto w3-padding w3-row">
                 <div class="logo w3-col l3 m4">
-                    <a href="/"><img src="<?php echo $logos_url; ?>/personaclix_pcdh_logo_light.png" alt="Persona Clix Logo (Dark)" class="w3-image"></a>
+                    <a href="/"><img src="<?php echo $metadata['images_url'] . $metadata['logos_uri']; ?>/personaclix_pcdh_logo_light.png" alt="Persona Clix Logo (Dark)" class="w3-image"></a>
                 </div>
 
                 <nav class="navbar w3-col l9 m8 w3-margin-top">
                     <div class="w3-bar">
-                        <a href="/" class="w3-bar-item w3-button w3-hover-flat-midnight-blue w3-hover-text-white w3-right w3-mobile<?php if( isset( $current_page ) && $current_page == "home" ): ?> w3-flat-midnight-blue current<?php endif; ?>">Home</a>
+                        <a href="/" class="w3-bar-item w3-button w3-hover-flat-midnight-blue w3-hover-text-white w3-right w3-mobile<?php if( isset( $metadata['current_page'] ) && $metadata['current_page'] == "home" ): ?> w3-flat-midnight-blue current<?php endif; ?>">Home</a>
                     </div>
                 </nav>
             </div>
         </header>
 
-        <?php if( isset( $hero ) && is_array( $hero ) ): ?>
-            <section class="hero w3-flat-midnight-blue<?php if( isset( $hero['class'] ) && $hero['class'] ) echo ' ' . $hero['class']; ?>" style="clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px)); padding-bottom: 50px;">
-                <div class="container w3-auto w3-row"<?php if( isset( $hero['background_image'] ) && $hero['background_image'] ): ?> style="min-height: 450px; background-repeat: no-repeat; background-position: top right; background-image: url( '<?php echo $hero['background_image']; ?>' );"<?php endif; ?>>
-                    <div class="info w3-padding w3-padding-64 w3-center<?php if( isset( $hero['promo_image'] ) && is_array( $hero['promo_image'] ) ) echo ' w3-col l8'; ?>">
-                        <?php if( isset( $hero['title'] ) && $hero['title'] ): ?>
-                            <h1 class="w3-xlarge w3-wide"><b><?php echo strtoupper( str_replace( '{{ site_title }}', $site_title, $hero['title'] ) ); ?></b></h1>
+        <?php if( isset( $metadata['hero'] ) ): ?>
+            <section class="hero w3-flat-midnight-blue<?php if( isset( $metadata['hero_class'] ) && $metadata['hero_class'] ) echo ' ' . $metadata['hero_class']; ?>" style="clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px)); padding-bottom: 50px;">
+                <div class="container w3-auto w3-row"<?php if( isset( $metadata['hero_background_image'] ) && $metadata['hero_background_image'] ): ?> style="min-height: 450px; background-repeat: no-repeat; background-position: top right; background-image: url( '<?php echo $metadata['hero_background_image']; ?>' );"<?php endif; ?>>
+                    <div class="info w3-padding w3-padding-64 w3-center<?php if( isset( $metadata['hero_promo_image_url'] ) ) echo ' w3-col l8'; ?>">
+                        <?php if( isset( $metadata['hero_title'] ) && $metadata['hero_title'] ): ?>
+                            <h1 class="w3-xlarge w3-wide"><b><?php echo strtoupper( str_replace( '{{ site_title }}', $metadata['site_title'], $metadata['hero_title'] ) ); ?></b></h1>
                         <?php endif; ?>
 
-                        <?php if( isset( $hero['description'] ) && $hero['description'] ): ?>
-                            <div class="w3-xxxlarge w3-wide"><b><?php echo str_replace( '{{ site_tagline }}', $site_tagline, $hero['description'] ); ?></b></div>
+                        <?php if( isset( $metadata['hero_description'] ) && $metadata['hero_description'] ): ?>
+                            <div class="w3-xxxlarge w3-wide"><b><?php echo str_replace( '{{ site_tagline }}', $metadata['site_tagline'], $metadata['hero_description'] ); ?></b></div>
                         <?php endif; ?>
 
-                        <?php if( isset( $hero['list'] ) && is_array( $hero['list'] ) && count( $hero['list'] ) > 0 ): ?>
-                            <ul <?php if( isset( $hero['list_icon'] ) && $hero['list_icon'] ): ?>style="list-style-image: url('<?php echo $ui_url; ?>/<?php echo $hero['list_icon']; ?>.png')"<?php endif; ?>>
-                                <?php foreach( $hero['list'] as $list_item ): ?>
-                                    <li><?php echo $list_item; ?></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        <?php endif; ?>
-
-                        <?php if( isset( $hero['button'] ) && is_array( $hero['button'] ) ): ?>
-                            <div class="button-price">
-                                <div class="button">
-                                    <a href="<?php if( isset( $hero['button']['href'] ) ) echo $hero['button']['href']; ?>"><?php if( isset( $hero['button']['text'] ) ) echo $hero['button']['text']; ?></a>
-                                </div>
-
-                                <?php if( isset( $hero['price'] ) && $hero['price'] ): ?>
-                                <div class="price" style="background-image: url('{{ ui_url }}/swirl.png');">
-                                    <?php if( isset( $hero['price']['text'] ) ) echo $hero['price']['text']; ?> <b><?php if( isset( $hero['price']['amount'] ) ) echo $hero['price']['amount']; ?></b>
-                                </div>
-                                <?php endif; ?>
-                            </div>
-                        <?php endif; ?>
-
-                        <?php if( isset( $hero['recommendedby'] ) && is_array( $hero['recommendedby'] ) ): ?>
+                        <?php if( isset( $metadata['hero_recommendedby_name'], $metadata['hero_recommendedby_url'] ) ): ?>
                             <div class="recommendedby w3-padding-16">
-                                Recommended by <b><a href="<?php if( isset( $hero['recommendedby']['url'] ) ) echo $hero['recommendedby']['url']; ?>" target="_blank" rel="nofollow"><?php if( isset( $hero['recommendedby']['name'] ) ) echo $hero['recommendedby']['name']; ?></a></b>.
+                                Recommended by <b><a href="<?php if( isset( $metadata['hero_recommendedby_url'] ) ) echo $metadata['hero_recommendedby_url']; ?>" target="_blank" rel="nofollow"><?php if( isset( $metadata['hero_recommendedby_name'] ) ) echo $metadata['hero_recommendedby_name']; ?></a></b>.
                             </div>
                         <?php endif; ?>
                     </div>
 
-                    <?php if( isset( $hero['promo_image'] ) && is_array( $hero['promo_image'] ) ): ?>
+                    <?php if( isset( $metadata['hero_promo_image_url'], $metadata['hero_promo_image_alt'] ) ): ?>
                     <div class="promo-image w3-margin-top w3-col l4 w3-center" style="margin-bottom: -50px;">
-                        <img style="max-width: 115%;" src="<?php if( isset( $hero['promo_image']['url'] ) ) echo $hero['promo_image']['url']; ?>" alt="<?php if( isset( $hero['promo_image']['alt'] ) ) echo $hero['promo_image']['alt']; ?>" class="w3-image">
+                        <img style="max-width: 115%;" src="<?php if( isset( $metadata['hero_promo_image_url'] ) ) echo $metadata['hero_promo_image_url']; ?>" alt="<?php if( isset( $metadata['hero_promo_image_alt'] ) ) echo $metadata['hero_promo_image_alt']; ?>" class="w3-image">
                     </div>
                     <?php endif; ?>
                 </div>

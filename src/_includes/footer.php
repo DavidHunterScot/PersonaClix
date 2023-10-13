@@ -3,11 +3,11 @@
                 <div class="column w3-quarter">
                     <div class="logo">
                         <a href="/">
-                            <img src="<?php echo $logos_url; ?>/personaclix_pcdh_logo_light.png" alt="Persona Clix Logo (Light)" class="w3-image">
+                            <img src="<?php echo $metadata['images_url'] . $metadata['logos_uri']; ?>/personaclix_pcdh_logo_light.png" alt="Persona Clix Logo (Light)" class="w3-image">
                         </a>
                     </div>
-                    <p class="big"><?php echo $site_tagline; ?></p>
-                    <p>Copyright &copy; <a href="<?php echo $site_owner_url; ?>" target="_blank"><?php echo $site_owner; ?></a> <?php echo $launch_year; ?> - <?php echo $current_year; ?></p>
+                    <p class="big"><?php echo $metadata['site_tagline']; ?></p>
+                    <p>Copyright &copy; <a href="<?php echo $metadata['site_owner_url']; ?>" target="_blank"><?php echo $metadata['site_owner']; ?></a> <?php echo $metadata['launch_year']; ?> - <?php echo date( 'Y' ); ?></p>
                 </div>
                 <div class="column w3-quarter w3-bar-block w3-padding-16 w3-center">
                     <a href="/" class="w3-bar-item w3-button">Home</a>
