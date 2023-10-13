@@ -6,9 +6,9 @@ site_owner_url: https://www.dah5.com/davidhunter
 
 launch_year: 2016
 
-w3css_url: https://w3css.storage.dah5.com
-webfonts_url: https://webfonts.storage.dah5.com
-images_url: https://images.storage.dah5.com
+w3css_url: /assets/w3css
+webfonts_url: /assets/webfonts
+images_url: /assets/images
 
 icons_uri: /icons
 avatars_uri: /avatars
