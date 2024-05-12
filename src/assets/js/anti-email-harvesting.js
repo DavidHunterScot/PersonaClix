@@ -1,23 +1,8 @@
-var contact_methods = document.getElementsByClassName( 'method' );
+var email_addresses = document.getElementsByClassName( 'email-address' );
 
-for( let i = 0; i < contact_methods.length; i++ )
+for( let i = 0; i < email_addresses.length; i++ )
 {
-    var email_addresses = contact_methods[ i ].getElementsByClassName( 'email_address' );
-
-    if( email_addresses.length == 1 )
-    {
-        if( email_addresses[ 0 ].hasAttribute( 'email-address' ) )
-        {
-            var email_address = email_addresses[ 0 ].getAttribute( 'email-address' ).replaceAll( ' [at] ', '@' ).replaceAll( ' [dot] ', '.' );
-
-            email_addresses[ 0 ].innerHTML = "Email";
-            email_addresses[ 0 ].href = "mailto:" + email_address;
-            email_addresses[ 0 ].target = "_blank";
-        }
-        else
-        {
-            var email_address = email_addresses[ 0 ].innerHTML.replaceAll( ' [at] ', '@' ).replaceAll( ' [dot] ', '.' );
-            email_addresses[ 0 ].innerHTML = email_address;
-        }
-    }
+    var email_address_element = email_addresses[ i ];
+    var email_address_address = email_address_element.innerHTML.replaceAll( ' [at] ', '@' ).replaceAll( ' [dot] ', '.' );
+    email_address_element.innerHTML = email_address_address;
 }
