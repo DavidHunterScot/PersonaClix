@@ -48,6 +48,45 @@
 
         <a name="findoutmore"></a>
 
+        <div class="w3-light-gray" style="min-height: 100%;">
+            <div class="w3-auto w3-padding w3-padding-64">
+                <div class="w3-padding-64">
+                    <h2 class="w3-center w3-xxlarge"><b>OUR PLATFORM</b></h2>
+                    <hr class="w3-border-black" style="margin: auto; max-width: 300px;">
+                </div>
+
+                <div class="w3-row-padding w3-padding-64">
+                    <div class="w3-quarter w3-padding-large">
+                        <p class="w3-padding-large"><img src="/assets/images/icons/multiple.svg" alt="Icon: Multiple" class="w3-image"></p>
+                    </div>
+
+                    <div class="w3-threequarter">
+                        <h3 class="w3-xlarge"><b>Triple-Copy Redundancy</b></h3>
+                        <p class="w3-large">Your data is replicated three times at no additional cost to you to help protect against a system failure causing data loss. Note this is not the same as a backup and will not protect against user error.</p>
+                    </div>
+                </div>
+
+                <div class="w3-row-padding w3-padding-64">
+                    <div class="w3-querter w3-show-small w3-hide-medium w3-hide-large w3-padding-large">
+                        <p class="w3-padding-large">
+                            <img src="/assets/images/icons/server-2.svg" alt="Icon: Server 2" class="w3-image">
+                        </p>
+                    </div>
+
+                    <div class="w3-threequarter">
+                        <h3 class="w3-xlarge"><b>Daily Off-Site Backups</b></h3>
+                        <p class="w3-large">For disaster recovery purposes, we store a backup of your entire hosting account in a separate facility, which you can access at any time. It is still recommended to maintain your own backups for your own peace of mind.</p>
+                    </div>
+
+                    <div class="w3-quarter w3-hide-small w3-show-medium w3-show-large w3-padding-large">
+                        <p class="w3-padding-large">
+                            <img src="/assets/images/icons/server-2.svg" alt="Icon: Server 2" class="w3-image">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="w3-sand" style="min-height: 100%;">
             <div class="w3-auto w3-padding w3-padding-64">
                 <div class="w3-padding-64">
@@ -67,7 +106,7 @@
                             <li class="w3-padding-16 w3-white"><b>cPanel</b> Control Panel</li>
                             <li class="w3-padding-16 w3-white"><b>Friendly</b> Support</li>
                             <li class="w3-light-grey w3-padding-24">
-                                <a href="#" class="w3-button w3-green w3-padding-large">Get In Touch</a>
+                                <a href="#contact" class="w3-button w3-green w3-padding-large">Get In Touch</a>
                             </li>
                         </ul>
                     </div>
@@ -92,6 +131,7 @@
             </div>
         </div>
 
+        <a name="contact"></a>
         <div>
             <div class="w3-auto w3-padding w3-padding-64">
                 <h2 class="w3-center"><b>GET IN TOUCH</b></h2>
