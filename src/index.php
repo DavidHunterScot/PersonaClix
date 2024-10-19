@@ -127,7 +127,7 @@
                     </div>
                 </div>
 
-                <p class="w3-center">All services include free access to <b><a href="https://clixpanel.io" target="_blank">ClixPanel</a></b>, custom-made in-house software.</p>
+                <p class="w3-center">All services include free access to <b><a href="https://clixpanel.personaclix.com" target="_blank">ClixPanel</a></b>, custom-made in-house software.</p>
             </div>
         </div>
 
