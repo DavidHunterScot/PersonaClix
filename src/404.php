@@ -1,52 +1,27 @@
 ---
+page_title: 404 Not Found
 friendly_urls: false
+layout: src/_includes/layout.php
 ---
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Persona Clix</title>
 
-        <link rel="stylesheet" type="text/css" href="/assets/w3css/4.15/w3.css">
-        <link rel="stylesheet" type="text/css" href="/assets/webfonts/poppins/poppins.css">
+<section class="w3-dark-gray">
+    <div class="w3-auto w3-padding w3-padding-64">
+        <h2 class="w3-xxxlarge"><b>404</b>&nbsp;<i>Not Found</i></h2>
+        <p class="w3-xlarge">Oops! It looks like we couldn't find what you were looking for.</p>
+    </div>
+</section>
 
-        <style type="text/css">
-            body,
-            html
-            {
-                height: 100%;
-            }
+<section>
+    <div class="w3-auto w3-padding w3-padding-64 w3-large">
+        <p>But don't worry - there are plenty of ways to get back on track!</p>
 
-            body, h1, h2, h3, h4, h5, h6
-            {
-                font-family: 'Poppins', sans-serif;
-            }
-            
-            .bgimg
-            {
-                background-image: url('/assets/images/backgrounds/datacentre-hall-darker.jpg');
-                min-height: 100%;
-                background-position: center;
-                background-size: cover;
-            }
-        </style>
-    </head>
+        <ul>
+            <li><b>Check the URL:</b> It's possible there was a typo in the web address. Double-check to make sure everything is spelled correctly.</li>
+            <li><b>Go back to Home Page:</b> Returning to the <a href="/">home page</a> can often help you find what you were looking for.</li>
+            <li><b>It might not exist:</b> While we strive to keep everything up to date, there's a chance the resource has been removed or never existed in the first place.</li>
+        </ul>
 
-    <body>
-        <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-            <div class="w3-display-middle">
-                <h1 class="w3-jumbo w3-animate-top">Not Found (404)</h1>
-                <hr class="w3-border-grey" style="margin: auto; max-width: 400px;">
-                <p class="w3-large w3-center">Sorry, there is nothing found here.</p>
-                <p>&nbsp;</p>
-                <p class="w3-center"><a href="/" class="w3-btn w3-large w3-dark-gray w3-round">Go to Home Page</a></p>
-            </div>
+        <p>We apologize for the inconvenience, and we hope you’ll find what you’re looking for soon!</p>
+    </div>
+</section>
 
-            <div class="w3-display-bottomright w3-padding-large w3-xlarge">
-                <img src="/assets/images/logos/personaclix_logo_white.png" alt="Persona Clix Logo" class="w3-image" style="max-width: 300px;">
-            </div>
-        </div>
-    </body>
-</html>
