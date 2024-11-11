@@ -96,7 +96,7 @@
 
                 <div class="w3-row-padding">
 
-                    <div class="w3-half w3-margin-bottom">
+                    <div class="w3-twothird w3-margin-bottom w3-large">
                         <ul class="w3-ul w3-border w3-center w3-hover-shadow">
                             <li class="w3-black w3-xlarge w3-padding-32">Web Hosting</li>
                             <li class="w3-padding-16 w3-white">Starting at...</li>
@@ -111,23 +111,23 @@
                         </ul>
                     </div>
 
-                    <div class="w3-half w3-margin-bottom">
+                    <div class="w3-third w3-margin-bottom w3-small w3-margin-top">
                         <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                            <li class="w3-dark-gray w3-xlarge w3-padding-32">VPS Hosting</li>
-                            <li class="w3-padding-16 w3-white">Starting at...</li>
-                            <li class="w3-padding-16 w3-white"><b>1</b> vCPU Core</li>
-                            <li class="w3-padding-16 w3-white"><b>1 GB</b> RAM</li>
-                            <li class="w3-padding-16 w3-white"><b>10 GB</b> NVMe SSD Storage</li>
-                            <li class="w3-padding-16 w3-white"><b>1 TB</b> Data Transfer Allowance</li>
-                            <li class="w3-padding-16 w3-white"><b>Unmanaged</b></li>
+                            <li class="w3-dark-gray w3-xlarge w3-padding-32">Basic Website Design</li>
+                            <li class="w3-padding-16 w3-white">Service includes...</li>
+                            <li class="w3-padding-16 w3-white"><b>Static</b> Website</li>
+                            <li class="w3-padding-16 w3-white"><b>Technologies:</b> HTML, CSS, JS</li>
+                            <li class="w3-padding-16 w3-white"><b>Static Assets:</b> Images, Audio, and Video</li>
+                            <li class="w3-padding-16 w3-white"><b><a href="https://weburl.net/staticphp" target="_blank">StaticPHP</a>:</b> Static Site Generator</li>
+                            <li class="w3-padding-16 w3-white"><b>Other Options</b> may be available</li>
                             <li class="w3-light-grey w3-padding-24">
-                                <button class="w3-button w3-gray w3-padding-large" disabled>Work in Progress</button>
+                                <a href="#contact" class="w3-button w3-dark-gray w3-padding-large">Get In Touch</a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <p class="w3-center">All services include free access to <b><a href="https://clixpanel.personaclix.com" target="_blank">ClixPanel</a></b>, custom-made in-house software.</p>
+                <p class="w3-center">All services include free access to <b><a href="https://weburl.net/clixpanel" target="_blank">ClixPanel</a></b>, our custom-made in-house software.</p>
             </div>
         </div>
 
