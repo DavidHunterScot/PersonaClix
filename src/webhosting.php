@@ -1,17 +1,19 @@
 ---
 page_title: Web Hosting
 layout: src/_includes/layout.php
+current_nav_item: webhosting
 ---
 
-<section class="w3-metro-purple">
-    <div class="w3-auto w3-padding w3-padding-64">
-        <h2 class="w3-xxlarge"><b>Web Hosting</b></h2>
-        <p class="w3-large">The online home for your web project.</p>
+<section class="hero" style="background-image: url( '/assets/images/backgrounds/datacentre-hall-darker.jpg' ); background-position: bottom center; color: white;">
+    <div class="container">
+        <h2 class="title">Web Hosting</h2>
+        <p class="subtitle">The online home for your web project.</p>
     </div>
 </section>
 
 <section>
-    <div class="w3-auto w3-padding w3-padding-64">
+    <div class="container">
         <h3>Coming Soon - Watch This Space</h3>
+        
     </div>
 </section>
