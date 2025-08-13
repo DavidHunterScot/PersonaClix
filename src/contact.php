@@ -17,3 +17,9 @@ current_nav_item: contact
         <p class="email-address">contact [at] personaclix [dot] com</p>
     </div>
 </section>
+
+<section class="alt">
+    <div class="container">
+        
+    </div>
+</section>
