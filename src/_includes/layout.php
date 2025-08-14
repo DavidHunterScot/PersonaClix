@@ -19,9 +19,9 @@ content_placeholder: {{ content }}
                 <p>Welcome to Persona Clix!</p>
 
                 <nav>
-                    <a href="https://status.personaclix.com" target="_blank">Service Status</a>
-                    <a href="https://webmail.personaclix.com" target="_blank">Webmail</a>
-                    <a href="https://controlpanel.personaclix.com" target="_blank">Control Panel</a>
+                    <a href="https://weburl.net/uptimestatus" target="_blank">Uptime Status</a>
+                    <a href="/servers">Webmail</a>
+                    <a href="/servers">Control Panel</a>
                 </nav>
             </div>
         </header>
@@ -44,7 +44,8 @@ content_placeholder: {{ content }}
         <footer class="main">
             <div class="container">
                 <div>
-                    <p><img src="/assets/images/logos/personaclix_pcdh_logo_light.png" alt="Persona Clix" class="logo"></p>
+                    <p class="hide-light-mode show-dark-mode"><img src="/assets/images/logos/personaclix_pcdh_logo_light.png" alt="Persona Clix" class="logo"></p>
+                    <p class="hide-dark-mode show-light-mode"><img src="/assets/images/logos/personaclix_pcdh_logo_dark.png" alt="Persona Clix" class="logo"></p>
                     <p>Persona Clix</p>
                 </div>
 
@@ -53,6 +54,10 @@ content_placeholder: {{ content }}
                     <a href="/webhosting">Web Hosting</a>
                     <a href="/websitecreation">Website Creation</a>
                     <a href="/contact">Contact</a>
+                </nav>
+
+                <nav>
+                    <a href="/servers">Servers</a>
                 </nav>
             </div>
         </footer>

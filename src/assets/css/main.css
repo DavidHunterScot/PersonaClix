@@ -62,6 +62,7 @@ header h1
 header nav
 {
     display: flex;
+    text-align: center;
 }
 
 header nav a
@@ -151,8 +152,8 @@ section.alt
 
 footer
 {
-    background-color: #222;
-    color: #ffffff;
+    background-color: #fff;
+    color: #333;
 }
 
 footer.main
@@ -195,12 +196,110 @@ footer nav a
     font-size: 0.9rem;
     font-weight: normal;
     text-decoration: none;
-    color: #cccccc;
+    color: #333;
 }
 
 footer nav a:hover
 {
-    color: #ffffff;
+    color: #000;
+}
+
+.servers .server
+{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    border: 1px solid transparent;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+}
+
+.servers .server .info .title .badge
+{
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.5rem;
+    font-size: 0.7rem;
+    font-family: monospace;
+    vertical-align: middle;
+}
+
+.servers .server .info .title .badge.internal
+{
+    background-color: lightgreen;
+    color: black;
+}
+
+.servers .server .info .title .badge.external
+{
+    background-color: lightskyblue;
+    color: black;
+}
+
+.servers .server .info .hostname
+{
+    font-family: monospace;
+}
+
+section .servers .server
+{
+    background-color: #eee;
+    border-color: #ccc;
+}
+
+section.alt .servers .server
+{
+    background-color: #ddd;
+    border-color: #bbb;
+}
+
+.server .options
+{
+    margin-top: 1rem;
+}
+
+.server .options a
+{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.server .options a.cpanel
+{
+    background-color: chocolate;
+    color: #ddd;
+}
+
+.server .options a.cpanel:hover
+{
+    box-shadow: 0 0 1rem chocolate;
+    color: #fff;
+}
+
+.server .options a.webmail
+{
+    background-color: #4d6066;
+    color: #ddd;
+}
+
+.server .options a.webmail:hover
+{
+    box-shadow: 0 0 1rem #4d6066;
+    color: #fff;
+}
+
+.show-light-mode
+{
+    display: block;
+}
+
+.hide-light-mode
+{
+    display: none;
 }
 
 @media ( min-width: 800px )
@@ -220,6 +319,18 @@ footer nav a:hover
     {
         margin-left: 12rem;
         align-items: initial;
+    }
+
+    .servers .server
+    {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .server .options
+    {
+        margin-top: 0;
     }
 }
 
@@ -268,8 +379,67 @@ footer nav a:hover
         background-color: #333;
     }
 
+    footer
+    {
+        background-color: #222;
+        color: #ddd;
+    }
+
+    footer nav a
+    {
+        color: #ddd;
+    }
+
+    footer nav a:hover
+    {
+        color: #fff;
+    }
+
     footer.bottom
     {
         border-top-color: #444;
+    }
+
+    .servers .server
+    {
+        background-color: #444;
+        border-color: #222;
+        color: #ddd;
+    }
+
+    section .servers .server
+    {
+        background-color: #333;
+        border-color: #111;
+        color: #ddd;
+    }
+
+    section.alt .servers .server
+    {
+        background-color: #444;
+        border-color: #222;
+        color: #fff;
+    }
+
+    .servers .server .info .title .badge.internal
+    {
+        background-color: green;
+        color: white;
+    }
+
+    .servers .server .info .title .badge.external
+    {
+        background-color: royalblue;
+        color: white;
+    }
+
+    .show-dark-mode
+    {
+        display: block;
+    }
+
+    .hide-dark-mode
+    {
+        display: none;
     }
 }
