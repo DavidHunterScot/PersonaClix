@@ -3,7 +3,9 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
     RewriteEngine on
     
-    RewriteCond %{env:HTTPS} !on [OR]
-    RewriteCond %{HTTP_HOST} !^www.personaclix.com$
+    RewriteCond %{env:HTTPS} !on
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=307,END]
+
+    RewriteCond %{HTTP_HOST} ^personaclix.com$
     RewriteRule ^(.*)$ https://www.personaclix.com/$1 [R=307,END]
 </IfModule>
